@@ -1,3 +1,8 @@
+.main h1{
+  font-weight: 700;
+  font-size: x-large;
+}
+
 section{
   background: white;
   padding: 15px;
@@ -52,64 +57,6 @@ section.topics .item-list a{
   border-radius: 4px;
 }
 section.topics .item-list a:hover{
-  color: #fff;
-  background-color: #0080ff !important;
-}
-
-/*about*/
-section.about p{
-  padding: 8px;
-}
-
-/*post*/
-section.post p{
-  padding: 8px;
-}
-section.post h3{
-  font-size: x-large;
-  padding-left: 7px;
-  border-bottom: #E5E5E5 2px solid;
-  margin: 0.5em auto;
-}
-section.post h4{
-  font-size: large;
-  padding-left: 7px;
-  border-bottom: #E5E5E5 1px solid;
-  margin: 0.3em auto;
-}
-section.post ul{
-  list-style: disc;
-  margin: 3px 15px 10px 15px;
-  padding: 10px 5px 5px 30px;
-}
-section.post li span{
-  border: 1px red solid;
-  color: red;
-  border-radius: 2px;
-  font-size: 12px;
-  padding: 0 3px;
-  margin: 0 5px 0 0;
-}
-section.post li span.nini{
-  border: 1px #252525 solid;
-  color: #252525;
-  border-radius: 2px;
-  font-size: 12px;
-  padding: 0 3px;
-  margin: 0 5px 0 0;
-}
-section.post li {
-  margin: 5px 0;
-}
-section.post a.post-form {
-  color: #fff !important;
-  background-color: #06c;
-  padding: 8px 24px 8px 24px;
-  margin-right: 24px;
-  border-radius: 4px;
-  margin: 20px 10px;
-}
-section.post a.post-form:hover {
   color: #fff;
   background-color: #0080ff !important;
 }
