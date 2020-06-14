@@ -1,0 +1,57 @@
+section{
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.25);
+  margin: 20px 0;
+}
+section h2{
+  font-size: xx-large;
+  border-left: black 5px solid;
+  padding-left: 7px;
+  margin-bottom: 0.5em;
+}
+
+/*topics*/
+section.topics .headimg{
+  float: right;
+}
+section.topics .item-list{
+  min-height: 250px;
+}
+section.topics .item-list p{
+  display: block;
+  color: #252525;
+  padding: 16px 24px 16px 8px;
+  border-bottom: 1px solid #e5e5e5;
+}
+section.topics .item-list p span{
+  border: 1px #252525 solid;
+  color: #252525;
+  border-radius: 2px;
+  font-size: 12px;
+  padding: 0 3px;
+}
+section.topics .item-list p:last-child{
+  display: block;
+  color: #252525;
+  padding: 16px 24px 16px 8px;
+  border-bottom: none;
+  text-align: right;
+}
+section.topics .item-list a{
+  color: #fff !important;
+  background-color: #06c;
+  padding: 8px 24px 8px 24px;
+  margin-right: 24px;
+  border-radius: 4px;
+}
+section.topics .item-list a:hover{
+  color: #fff;
+  background-color: #0080ff !important;
+}
+
+/*about*/
+section.about p{
+  padding: 8px;
+}
