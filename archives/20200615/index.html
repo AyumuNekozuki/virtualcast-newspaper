@@ -8,6 +8,8 @@
 
   <!-- use thirdparty-->
   <link rel="stylesheet" href="../../destyle.css">
+  <link rel="stylesheet" href="../../viewer.min.css">
+  <script src="../../viewer.min.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
 
   <!-- meta data -->
@@ -68,8 +70,16 @@
 
     <h1>2020年06月15日</h1>
     <div class="watch">
-      
-
+      <ul id="images">
+        <li><img src="1.png"></li>
+        <li><img src="2.png"></li>
+        <li><img src="3.png"></li>
+        <li><img src="4.png"></li>
+      </ul>
+      <script>
+        var viewer = new Viewer(document.getElementById('images')); //任意でid名を指定
+      </script>
+      <p><i class="fas fa-search-plus"></i>画像クリックで拡大します</p>
     </div>
 
     <div class="tabs">
@@ -95,10 +105,18 @@
       <section class="tab_content" id="vci_content">
         <h2>関連VCI</h2>
         <div class="item-box">
-          <iframe src="https://hatenablog.com/embed?url=https://seed.online/products/17903cce5bbe868d7cd49ebf9e5f71ce5c85541cf8041c217c7a0d6f90780aaf" frameborder="0"></iframe>
-          <iframe src="https://hatenablog.com/embed?url=https://seed.online/products/634b2c8510adcc8d2e40a1bc9d259c096d6353d103a6ed3652e314f228a7b03f" frameborder="0"></iframe>
-          <iframe src="https://hatenablog.com/embed?url=https://seed.online/products/0e3603b97f60fda31f20eed4f87c47c768d18d0b00e1311608f6043ab36ae64a" frameborder="0"></iframe>
-          <iframe src="https://hatenablog.com/embed?url=https://seed.online/products/2318cc0940cbd49e5017d70682481e24b3d023b2a51f2177f7e3fabb78594762" frameborder="0"></iframe>
+          <iframe
+            src="https://hatenablog.com/embed?url=https://seed.online/products/17903cce5bbe868d7cd49ebf9e5f71ce5c85541cf8041c217c7a0d6f90780aaf"
+            frameborder="0"></iframe>
+          <iframe
+            src="https://hatenablog.com/embed?url=https://seed.online/products/634b2c8510adcc8d2e40a1bc9d259c096d6353d103a6ed3652e314f228a7b03f"
+            frameborder="0"></iframe>
+          <iframe
+            src="https://hatenablog.com/embed?url=https://seed.online/products/0e3603b97f60fda31f20eed4f87c47c768d18d0b00e1311608f6043ab36ae64a"
+            frameborder="0"></iframe>
+          <iframe
+            src="https://hatenablog.com/embed?url=https://seed.online/products/2318cc0940cbd49e5017d70682481e24b3d023b2a51f2177f7e3fabb78594762"
+            frameborder="0"></iframe>
         </div>
       </section>
 

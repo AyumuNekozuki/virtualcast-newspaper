@@ -3,6 +3,24 @@
   font-size: xx-large;
 }
 
+.watch{
+  text-align: center;
+  margin: 10px;
+}
+.watch ul li{
+  display: inline-block;
+}
+.watch ul#images img{
+  max-height: 250px;
+}
+
+.watch p{
+  margin: 15px 0;
+  color: #666;
+}
+.watch p i{
+  padding-right: 0.5rem;
+}
 
 section{
   padding: 10px;
@@ -63,7 +81,7 @@ section#url_content .item-list a::after{
 /*tabs*/
 /*タブ切り替え全体のスタイル*/
 .tabs {
-  margin-top: 50px;
+  margin-top: 25px;
   box-shadow: 0 1px 3px rgba(0,0,0,.25);
   border-radius: 5px;
 }
