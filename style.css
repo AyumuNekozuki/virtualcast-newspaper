@@ -48,17 +48,15 @@ header{
   margin: 0 auto;
 }
 .logo{
-  margin: 0 15px 0;
-  font-size: 34px;
-  line-height: 40px;
+  margin: 0 0 0 15px;
   align-items: center;
   float: left;
   width: 250px;
 }
 .logo a{
+  display: block;
   width: 250px;
   height: 46px;
-  background: url("logo.svg");
 }
 .page-header ul{
   float: left;
