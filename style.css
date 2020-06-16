@@ -48,7 +48,7 @@ header{
   margin: 0 auto;
 }
 .logo{
-  margin: 8px 15px 7px;
+  margin: 0 15px 0;
   font-size: 34px;
   line-height: 40px;
   align-items: center;
@@ -58,6 +58,7 @@ header{
 .logo a{
   width: 250px;
   height: 46px;
+  background: url("logo.svg");
 }
 .page-header ul{
   float: left;
