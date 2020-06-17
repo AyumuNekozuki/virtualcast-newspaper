@@ -199,14 +199,14 @@ footer small{
     height: 50px;
   }
   #sp-menu-check:checked + #sp-menu-check-label + #sp-site-header-left{
-    visibility: visible;
+    display: block;
   }
 
   #sp-site-header-left{
     height: 100%;
     padding-top: 40px;
     background-color: #272727;
-    visibility: hidden;
+    display: none;
   }
   #sp-site-header-left li{
     line-height: 50px;
@@ -393,13 +393,13 @@ footer small{
       height: 44px;
     }
     #sp-menu-check:checked + #sp-menu-check-label + #sp-site-header-left{
-      visibility: visible;
+      display: block;
     }
   
     #sp-site-header-left{
       height: 100%;
       background-color: #272727;
-      visibility: hidden;
+      display: none;
     }
     #sp-site-header-left li{
       line-height: 45px;
