@@ -133,6 +133,8 @@ section.post a.post-form:hover {
   background-color: #0080ff !important;
 }
 
+
+
 @media screen and (max-width: 425px) {
   section{
     background: white;
@@ -150,10 +152,10 @@ section.post a.post-form:hover {
   }
 
   section.topics .item-list p{
-    font-size: 12px;
+    font-size: 14px;
     display: block;
     color: #252525;
-    padding: 8px 24px 8px 8px;
+    padding: 8px;
     border-bottom: 1px solid #e5e5e5;
     line-height: initial;
   }
