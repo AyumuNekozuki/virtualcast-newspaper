@@ -1,62 +1,122 @@
-.main h1{
-  font-weight: 700;
-  font-size: x-large;
+@media screen and (min-width: 768px) {
+  .main h1{
+    margin: 15px 5px 0 15px;
+    font-size: 32px;
+  }
+
+  section{
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.25);
+    margin: 20px 0;
+  }
+  section h2{
+    font-size: xx-large;
+    border-left: #252525 5px solid;
+    padding-left: 7px;
+    margin-bottom: 0.5em;
+  }
+  
+  /*topics*/
+  section.topics .headimg{
+    float: right;
+  }
+  section.topics .headimg img{
+    width: 260px;
+    height: 300px;
+  }
+  section.topics .item-list{
+    min-height: 250px;
+  }
+  section.topics .item-list p{
+    display: block;
+    color: #252525;
+    padding: 16px 24px 16px 8px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  section.topics .item-list p span{
+    border: 1px #252525 solid;
+    color: #252525;
+    border-radius: 2px;
+    font-size: 12px;
+    padding: 0 3px;
+    margin: 0 5px ;
+  }
+  section.topics .item-list p:last-child{
+    display: block;
+    color: #252525;
+    padding: 16px 24px 16px 8px;
+    border-bottom: none;
+    text-align: right;
+  }
+  section.topics .item-list a{
+    color: #fff !important;
+    background-color: #06c;
+    padding: 8px 24px 8px 24px;
+    margin-right: 24px;
+    border-radius: 4px;
+  }
+  section.topics .item-list a:hover{
+    color: #fff;
+    background-color: #0080ff !important;
+  }
 }
 
-section{
-  background: white;
-  padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0,0,0,.25);
-  margin: 20px 0;
-}
-section h2{
-  font-size: xx-large;
-  border-left: #252525 5px solid;
-  padding-left: 7px;
-  margin-bottom: 0.5em;
-}
+@media screen and (max-width: 767px) {
+  .main h1{
+    margin: 15px 5px 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
 
-/*topics*/
-section.topics .headimg{
-  float: right;
-}
-section.topics .headimg img{
-  width: 260px;
-  height: 300px;
-}
-section.topics .item-list{
-  min-height: 250px;
-}
-section.topics .item-list p{
-  display: block;
-  color: #252525;
-  padding: 16px 24px 16px 8px;
-  border-bottom: 1px solid #e5e5e5;
-}
-section.topics .item-list p span{
-  border: 1px #252525 solid;
-  color: #252525;
-  border-radius: 2px;
-  font-size: 12px;
-  padding: 0 3px;
-  margin: 0 5px ;
-}
-section.topics .item-list p:last-child{
-  display: block;
-  color: #252525;
-  padding: 16px 24px 16px 8px;
-  border-bottom: none;
-  text-align: right;
-}
-section.topics .item-list a{
-  color: #fff !important;
-  background-color: #06c;
-  padding: 8px 24px 8px 24px;
-  margin-right: 24px;
-  border-radius: 4px;
-}
-section.topics .item-list a:hover{
-  color: #fff;
-  background-color: #0080ff !important;
+  section.topics .headimg{
+    display: none;
+  }
+
+  section{
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.25);
+    margin: 20px 5px;
+  }
+  section h2{
+    border-left: #252525 5px solid;
+    padding-left: 7px;
+    margin-bottom: 0.5em;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  section.topics .item-list p{
+    font-size: 14px;
+    display: block;
+    color: #252525;
+    padding: 8px;
+    border-bottom: 1px solid #e5e5e5;
+    line-height: initial;
+  }
+  section.topics .item-list p span{
+    border: 1px #252525 solid;
+    color: #252525;
+    border-radius: 2px;
+    font-size: 8px;
+    padding: 0 3px;
+    margin: 0 5px ;
+  }
+  section.topics .item-list p:last-child{
+    display: block;
+    color: #252525;
+    padding: 16px 24px 16px 8px;
+    border-bottom: none;
+    text-align: right;
+  }
+  section.topics .item-list a{
+    color: #fff !important;
+    background-color: #0080ff;
+    padding: 8px 24px 8px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
 }

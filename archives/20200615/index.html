@@ -33,7 +33,39 @@
 <body>
   <header>
     <div class="site-header">
-      <ul class="site-header-left">
+      <div class="sp-header">
+        <h1 class="logo">
+          <a href="/">
+            <img src="../../logo.svg">
+          </a>
+        </h1>
+        
+        <input id="sp-menu-check" type="checkbox" value="off" class="sp-menu-check">
+        <label id="sp-menu-check-label" for="sp-menu-check" class="sp-menu-check"><span></span></label>
+        
+
+        <ul class="sp-site-header-left" id="sp-site-header-left">
+          <li>
+            <a href="/archives"><span>アーカイブ</span></a>
+          </li>
+          <li>
+            <a href="/news"><span>お知らせ</span></a>
+          </li>
+          <li>
+            <a href="https://virtualcast.jp/"><span>バーチャルキャスト<i class="fas fa-external-link-alt"></i></span></a>
+          </li>
+          <li>
+            <a href="https://virtualcast.jp/"><span>THE SEED ONLINE<i class="fas fa-external-link-alt"></i></span></a>
+          </li>
+          <li>
+            <a href="https://id.pokemori.jp/vcas-calendar/"><span class="header-nav-last">Vキャスイベカレ<i
+                  class="fas fa-external-link-alt"></i></span></a>
+          </li>
+        </ul>
+
+      </div>
+
+      <ul class="site-header-left pc-header-ul">
         <li>
           <a href="/news"><span>お知らせ</span></a>
         </li>
@@ -48,7 +80,7 @@
                 class="fas fa-external-link-alt"></i></span></a>
         </li>
       </ul>
-      <ul class="site-header-right">
+      <ul class="site-header-right pc-header-ul">
         <li>
           <a href="https://seed.online/products/375e29f8544b8fd86bc40458f4f1cbbf93f4996296d6d370f378c2cf4c48ea1d"><span
               class="header-nav-last">Vキャスで読む<i class="fas fa-external-link-alt"></i></span></a>
@@ -63,7 +95,7 @@
       </h1>
       <ul>
         <li><a href="/archives">アーカイブ</a></li>
-        <li><a href="https://vcnp.nekozuki.me#post">寄稿・広告掲載</a></li>
+        <li class="header-post"><a href="/#post">寄稿・広告掲載</a></li>
         <li class="header-read-now"><a href="/new_read.html">最新刊を読む</a></li>
       </ul>
     </div>
@@ -74,9 +106,9 @@
     <div class="watch">
       <ul id="images">
         <li><img src="1.png"></li>
-        <li><img src="2.png"></li>
-        <li><img src="3.png"></li>
-        <li><img src="4.png"></li>
+        <li class="sp"><img src="2.png"></li>
+        <li class="sp"><img src="3.png"></li>
+        <li class="sp"><img src="4.png"></li>
       </ul>
       <script>
         var viewer = new Viewer(document.getElementById('images')); //任意でid名を指定
@@ -156,54 +188,6 @@
       <!-- AddToAny END -->
 
     </div>
-
-    <!--
-    <div class="tab" id="tab_div">
-      <input id="topics" type="radio" name="tab_item" checked>
-      <label class="tab_item" for="topics">TOPICS</label>
-
-      <input id="url" type="radio" name="tab_item">
-      <label class="tab_item" for="url">関連URL</label>
-
-      <input id="comment" type="radio" name="tab_item">
-      <label class="tab_item" for="comment">コメント</label>
-
-      <div class="tab_content">
-
-        <section class="topics" id="topics_content">
-          <h2>TOPICS</h2>
-          <div class="item-list">
-            <p>バーチャルキャスト ver1.9.3bリリース フォースの力が使えるように</p>
-            <p>はむちさん Vキャスター初の声優デビュー？ SR『公式テラー声優オーディション』出場中！</p>
-            <p><span>1文ニュース</span>『VIVE Forcus Plus』PC・ベースステーション不要でVキャスが遊べる！？</p>
-            <p><span>広告</span>『烏丸ゆんのりょーいきBGM』BOOTHで配信中！</p>
-          </div>
-        </section>
-
-        <section class="url" id="url_content">
-          <h2>関連URL</h2>
-          <div class="item-list">
-            <p>バーチャルキャスト ver1.9.3bリリース フォースの力が使えるように</p>
-            <p>はむちさん Vキャスター初の声優デビュー？ SR『公式テラー声優オーディション』出場中！</p>
-            <p><span>1文ニュース</span>『VIVE Forcus Plus』PC・ベースステーション不要でVキャスが遊べる！？</p>
-            <p><span>広告</span>『烏丸ゆんのりょーいきBGM』BOOTHで配信中！</p>
-          </div>
-        </section>
-
-        <section class="comment" id="comment_content">
-          <h2>コメント</h2>
-          <div class="item-list">
-            <p>バーチャルキャスト ver1.9.3bリリース フォースの力が使えるように</p>
-            <p>はむちさん Vキャスター初の声優デビュー？ SR『公式テラー声優オーディション』出場中！</p>
-            <p><span>1文ニュース</span>『VIVE Forcus Plus』PC・ベースステーション不要でVキャスが遊べる！？</p>
-            <p><span>広告</span>『烏丸ゆんのりょーいきBGM』BOOTHで配信中！</p>
-          </div>
-        </section>
-
-        
-    <!--
-      </div>
-    -->
   </div>
 
 
@@ -215,11 +199,7 @@
         <h3>お問い合わせ</h3>
         <p>新聞についてのお問い合わせは、こちらまでお願い致します。</p>
         <a class="footer-discord" href="https://discordapp.com/invite/NmC2zf6"><i class="fab fa-discord"></i>
-          Vキャス非公式Discord #Vキャス新聞</a>
-
-        <p>当サイトの表示崩れ等ありましたらこちらまでお願い致します。</p>
-        <a class="footer-discord" href="https://github.com/AyumuNekozuki/virtualcast-newspaper"><i
-            class="fab fa-github"></i> AyumuNekozuki/virtualcast-newspaper</a>
+          Vキャス非公式Discord</a>
       </div>
       <div class="footer staff">
         <h3>スタッフ</h3>
