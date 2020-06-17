@@ -28,6 +28,7 @@ section.topics .item-list p{
   color: #252525;
   padding: 16px 24px 16px 8px;
   border-bottom: 1px solid #e5e5e5;
+  line-height: initial;
 }
 section.topics .item-list p span{
   border: 1px #252525 solid;

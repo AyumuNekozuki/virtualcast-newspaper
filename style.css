@@ -1,11 +1,18 @@
+/*全共通*/
 body{
   background: #F4F4F4;
+  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Hiragino Kaku Gothic ProN,Meiryo,sans-serif;
 }
 header{
   background: #272727;
 }
 
-/*site-header*/
+
+@media screen and (min-width: 1024px) {
+  .sp-header{
+    display: none;
+  }
+    /*site-header*/
 .site-header{
   height: 36px;
   color: white;
@@ -133,7 +140,6 @@ footer{
 .footer.staff h4 {
   border-bottom: 1px solid #666;
   padding-left:  1rem;
-  width: 300px;
 }
 .footer.staff p {
   margin: 0 0 5px 1rem;
@@ -162,3 +168,200 @@ footer small{
   color: white;
   margin: 10px auto;
 }
+
+}
+
+@media screen and (min-width: 426px) and (max-width: 1023px) {
+/*site-header*/
+input.sp-menu-check{
+  display: none;
+}
+label.sp-menu-check{
+  float: right;
+  height: 50px;
+  width: 70px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 30px;
+  padding: 10px;
+  border-left: 2px solid rgb(85, 85, 85);
+}
+.sp-header #sp-menu-check-label ::before{
+  font-family: "Font Awesome 5 Free";
+  content: "\f0c9";
+  font-weight: 900;
+}
+.sp-header .logo{
+  height: 50px;
+  display: inline-block;
+}
+.sp-header .logo a, .sp-header .logo a img{
+  height: 50px;
+}
+#sp-menu-check:checked + #sp-menu-check-label + #sp-site-header-left{
+  visibility: visible;
+}
+
+#sp-site-header-left{
+  height: 100%;
+  padding-top: 40px;
+  background-color: #272727;
+  visibility: hidden;
+}
+#sp-site-header-left li{
+  line-height: 50px;
+  background-color: #272727;
+  border-bottom: #666 solid 1px;
+}
+#sp-site-header-left li a{
+  display: block;
+}
+#sp-site-header-left li a:hover{
+  background: #666;
+}
+#sp-site-header-left li a span{
+  padding: 0 10px 0 30px;
+}
+#sp-site-header-left li a span i{
+  font-size: 80%;
+  padding: 0 5px 0 5px;
+}
+
+.site-header {
+  height: 50px;
+  color: white;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+.site-header .pc-header-ul {
+  display: none;
+}
+
+
+/*page-header*/
+.page-header .logo{
+  display: none;
+}
+.page-header{
+  display: flex;
+  color: white;
+  max-width: 1152px;
+  margin: 0 auto;
+  box-shadow: 0 1px 3px rgba(0,0,0,.25);
+}
+
+.page-header ul{
+  float: left;
+  margin: 0 10px;
+  padding-top: 12px;
+  padding-bottom: 5px;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+}
+.page-header ul li{
+  line-height: 40px;
+  display: inline-block;
+}
+.page-header ul li a{
+  color: #c5c5c5;
+  border-radius: 4px;
+  display: inline-block;
+  padding: 0 10px 0 10px;
+  font-weight: 700;
+}
+.page-header ul li a:hover{
+  color: #fff;
+  background-color: #404040;
+}
+
+.header-read-now{
+  float: right;
+}
+.header-read-now a{
+  padding: 0 24px !important;
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 36px;
+  color: #fff !important;
+  background-color: #06c;
+}
+.header-read-now a:hover{
+  color: #fff;
+  background-color: #0080ff !important;
+}
+
+.main{
+  position: relative;
+  z-index: 1;
+}
+
+/*footer*/
+footer{
+  background: #272727;
+  margin: 0 auto;
+}
+.footer-wrap{
+  max-width: 1152px;
+  padding: 30px 15px;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer{
+  color: white;
+  vertical-align: top;
+  text-align: left;
+  margin: 0 10px 15px 10px;
+}
+.footer h3{
+  font-size: larger;
+  border-left: white 3px solid;
+  padding-left: 7px;
+  margin-bottom: 1em;
+}
+.footer p{
+  padding: 15px;
+}
+.footer.staff h4 {
+  border-bottom: 1px solid #666;
+  padding-left:  1rem;
+}
+.footer.staff p {
+  margin: 0 0 5px 1rem;
+  font-size: large;
+}
+.footer.staff p a{
+  margin: 0 3px;
+  font-size: 75%;
+}
+.footer .footer-discord{
+  margin: 8px 12px 16px 12px !important;
+  padding: 8px 16px ;
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 36px;
+  color: #fff !important;
+  background-color: #06c;
+  border-radius: 2px;
+}
+.footer .footer-discord:hover{
+  color: #fff;
+  background-color: #0080ff !important;
+}
+
+footer small{
+  color: white;
+  margin: 10px auto;
+}
+
+
+
+}
+
+@media screen and (max-width: 425px) {
+
+  
+
+}
+
