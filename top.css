@@ -1,4 +1,15 @@
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
+  section.topics .headimg{
+    float: right;
+  }
+  section.topics .headimg img{
+    width: 260px;
+    height: 300px;
+  }
+  section.topics .item-list{
+    min-height: 250px;
+  }
+
   section{
     background: white;
     padding: 15px;
@@ -46,96 +57,64 @@
     color: #fff;
     background-color: #0080ff !important;
   }
+
+  section.about p{
+    padding: 8px;
+  }
+
+  section.post p{
+    padding: 8px;
+  }
+  section.post h3{
+    font-size: x-large;
+    padding-left: 7px;
+    border-bottom: #E5E5E5 2px solid;
+    margin: 0.5em auto;
+  }
+  section.post ul{
+    list-style: disc;
+    margin: 3px 15px 10px 15px;
+    padding: 10px 5px 5px 30px;
+  }
+  section.post li {
+    margin: 5px 0;
+  }
+  section.post li span{
+    border: 1px red solid;
+    color: red;
+    border-radius: 2px;
+    font-size: 12px;
+    padding: 0 3px;
+    margin: 0 5px 0 0;
+  }
+  section.post li span.nini{
+    border: 1px #252525 solid;
+    color: #252525;
+    border-radius: 2px;
+    font-size: 12px;
+    padding: 0 3px;
+    margin: 0 5px 0 0;
+  }
+  section.post a.post-form {
+    color: #fff !important;
+    background-color: #06c;
+    padding: 8px 24px 8px 24px;
+    margin-right: 24px;
+    border-radius: 4px;
+    margin: 20px 10px;
+  }
+  section.post a.post-form:hover {
+    color: #fff;
+    background-color: #0080ff !important;
+  }
 }
 
 
-
-/*topics*/
-@media screen and (min-width: 768px) {
-  section.topics .headimg{
-    float: right;
-  }
-  section.topics .headimg img{
-    width: 260px;
-    height: 300px;
-  }
-}
 @media screen and (max-width: 767px) {
   section.topics .headimg{
     display: none;
   }
-}
 
-section.topics .item-list{
-  min-height: 250px;
-}
-
-
-
-
-
-
-/*about*/
-section.about p{
-  padding: 8px;
-}
-
-/*post*/
-section.post p{
-  padding: 8px;
-}
-section.post h3{
-  font-size: x-large;
-  padding-left: 7px;
-  border-bottom: #E5E5E5 2px solid;
-  margin: 0.5em auto;
-}
-section.post h4{
-  font-size: large;
-  padding-left: 7px;
-  border-bottom: #E5E5E5 1px solid;
-  margin: 0.3em auto;
-}
-section.post ul{
-  list-style: disc;
-  margin: 3px 15px 10px 15px;
-  padding: 10px 5px 5px 30px;
-}
-section.post li span{
-  border: 1px red solid;
-  color: red;
-  border-radius: 2px;
-  font-size: 12px;
-  padding: 0 3px;
-  margin: 0 5px 0 0;
-}
-section.post li span.nini{
-  border: 1px #252525 solid;
-  color: #252525;
-  border-radius: 2px;
-  font-size: 12px;
-  padding: 0 3px;
-  margin: 0 5px 0 0;
-}
-section.post li {
-  margin: 5px 0;
-}
-section.post a.post-form {
-  color: #fff !important;
-  background-color: #06c;
-  padding: 8px 24px 8px 24px;
-  margin-right: 24px;
-  border-radius: 4px;
-  margin: 20px 10px;
-}
-section.post a.post-form:hover {
-  color: #fff;
-  background-color: #0080ff !important;
-}
-
-
-
-@media screen and (max-width: 425px) {
   section{
     background: white;
     padding: 15px;
@@ -180,5 +159,57 @@ section.post a.post-form:hover {
     padding: 8px 24px 8px 24px;
     border-radius: 4px;
     font-weight: bold;
+  }
+
+  section.about p{
+    padding: 8px;
+    font-size: 14px;
+    line-height: initial;
+  }
+
+  section.post p{
+    padding: 8px;
+    font-size: 14px;
+    line-height: initial;
+  }
+  section.post h3{
+    font-size: 18px;
+    padding-left: 7px;
+    border-bottom: #E5E5E5 2px solid;
+    margin: 0.5em auto;
+  }
+  section.post ul{
+    list-style: disc;
+    margin: 3px 15px 10px 10px;
+    padding: 10px 5px 5px 20px;
+    line-height: initial;
+  }
+  section.post li {
+    margin: 5px 0;
+  }
+  section.post li span{
+    border: 1px red solid;
+    color: red;
+    border-radius: 2px;
+    font-size: 12px;
+    padding: 0 3px;
+    margin: 0 5px 0 0;
+  }
+  section.post li span.nini{
+    border: 1px #252525 solid;
+    color: #252525;
+    border-radius: 2px;
+    font-size: 12px;
+    padding: 0 3px;
+    margin: 0 5px 0 0;
+  }
+  section.post a.post-form {
+    color: #fff !important;
+    font-weight: bold;
+    background-color: #0080ff;
+    padding: 8px 24px 8px 24px;
+    margin-right: 24px;
+    border-radius: 4px;
+    margin: 20px 10px;
   }
 }
