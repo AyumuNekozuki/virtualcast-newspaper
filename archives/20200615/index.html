@@ -29,10 +29,17 @@
   <link rel="stylesheet" href="../watch.css">
   <link rel="stylesheet" href="../../font/icomoon-style.css" />
 
+  <!-- include -->
+  <script>
+    //共通パーツ読み込み
+    $(function () {
+      $("#header-include").load("/common/header.html");
+    });
+  </script>
 </head>
 
 <body>
-  <!--#include virtual="/common/header.html"-->
+  <div id="header-include"></div>
   <div class="main">
 
     <h1>2020年06月15日</h1>
