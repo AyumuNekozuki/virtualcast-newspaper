@@ -6,6 +6,11 @@
   padding-right: 0.5rem;
 }
 
+section#url_content i{
+  margin: 0 5px ;
+}
+
+
 
 /*tabs*/
 /*ラジオボタンを全て消す*/
@@ -61,7 +66,7 @@ input[name="tab_item"] {
     padding: 16px 24px 16px 8px;
     border-bottom: 1px solid #e5e5e5;
   }
-  section#topics_content .item-list p span{
+  section#topics_content .item-list p span,  section#url_content .item-list a span{
     border: 1px #252525 solid;
     color: #252525;
     border-radius: 2px;
@@ -87,6 +92,10 @@ input[name="tab_item"] {
     font-weight: 900;
     padding-left: 5px;
   }
+  section#url_content .item-list a span:hover{
+    text-decoration: none;
+  }
+
 
   /*tabs*/
   /*タブ切り替え全体のスタイル*/
@@ -165,7 +174,7 @@ input[name="tab_item"] {
     padding: 16px 24px 16px 8px;
     border-bottom: 1px solid #e5e5e5;
   }
-  section#topics_content .item-list p span{
+  section#topics_content .item-list p span, section#url_content .item-list a span{
     border: 1px #252525 solid;
     color: #252525;
     border-radius: 2px;
@@ -190,6 +199,10 @@ input[name="tab_item"] {
     font-weight: 900;
     padding-left: 5px;
   }
+  section#url_content .item-list a span:hover{
+    text-decoration: none;
+  }
+
 
   /*tabs*/
   /*タブ切り替え全体のスタイル*/
@@ -267,7 +280,7 @@ input[name="tab_item"] {
     border-bottom: 1px solid #e5e5e5;
     line-height: initial;
   }
-  section#topics_content .item-list p span{
+  section#topics_content .item-list p span,  section#url_content .item-list a span{
     border: 1px #252525 solid;
     color: #252525;
     border-radius: 2px;
@@ -275,7 +288,6 @@ input[name="tab_item"] {
     padding: 0 3px;
     margin: 0 5px ;
   }
-
   /*url*/
   section#url_content .item-list a,section#url_content .item-list a:visited{
     font-size: 14px;
@@ -291,6 +303,10 @@ input[name="tab_item"] {
     font-weight: 900;
     padding-left: 5px;
   }
+  section#url_content .item-list a span:hover{
+    text-decoration: none;
+  }
+
   /*tabs*/
   /*タブ切り替え全体のスタイル*/
   .tabs {

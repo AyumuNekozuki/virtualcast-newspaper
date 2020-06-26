@@ -22,8 +22,8 @@
   section.topics .item-list p{
     display: block;
     color: #252525;
-    padding: 16px 24px 16px 8px;
-    border-bottom: 1px solid #e5e5e5;
+    padding: 4px 24px 16px 8px;
+    line-height: 1.5rem;
   }
   section.topics .item-list p span{
     border: 1px #252525 solid;
@@ -37,7 +37,7 @@
     display: block;
     color: #252525;
     padding: 16px 24px 16px 8px;
-    border-bottom: none;
+    border-top: 1px solid #e5e5e5;
     text-align: right;
   }
   section.topics .item-list a{
@@ -84,7 +84,7 @@
     display: block;
     color: #252525;
     padding: 8px;
-    border-bottom: 1px solid #e5e5e5;
+    
     line-height: initial;
   }
   section.topics .item-list p span{
@@ -99,7 +99,7 @@
     display: block;
     color: #252525;
     padding: 16px 24px 16px 8px;
-    border-bottom: none;
+    border-top: 1px solid #e5e5e5;
     text-align: right;
   }
   section.topics .item-list a{
