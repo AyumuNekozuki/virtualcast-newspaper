@@ -86,12 +86,6 @@ input[name="tab_item"] {
     text-decoration: underline;
     background: #F4F4F4;
   }
-  section#url_content .item-list a::after{
-    font-family: "Font Awesome 5 Free" ;
-    content: "\f35d";
-    font-weight: 900;
-    padding-left: 5px;
-  }
   section#url_content .item-list a span:hover{
     text-decoration: none;
   }
@@ -193,12 +187,6 @@ input[name="tab_item"] {
     text-decoration: underline;
     background: #F4F4F4;
   }
-  section#url_content .item-list a::after{
-    font-family: "Font Awesome 5 Free" ;
-    content: "\f35d";
-    font-weight: 900;
-    padding-left: 5px;
-  }
   section#url_content .item-list a span:hover{
     text-decoration: none;
   }
@@ -296,12 +284,6 @@ input[name="tab_item"] {
     padding: 8px;
     border-bottom: 1px solid #e5e5e5;
     line-height: initial;
-  }
-  section#url_content .item-list a::after{
-    font-family: "Font Awesome 5 Free" ;
-    content: "\f35d";
-    font-weight: 900;
-    padding-left: 5px;
   }
   section#url_content .item-list a span:hover{
     text-decoration: none;
