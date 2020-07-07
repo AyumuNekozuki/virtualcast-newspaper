@@ -24,6 +24,26 @@
     margin-bottom: 0.5em;
   }
 
+  .info h3{
+    font-size: 18px;
+    padding: 0 0 .5rem 0;
+    border-bottom: #E5E5E5 2px solid;
+  }
+  .info h3 i{
+    margin: 0 .5rem;
+  }
+  .info a{
+    display: inline-block;
+    width: 100%;
+    font-size: 16px;
+    margin-top: .25rem;
+    padding: .75rem 0 .75rem 1rem;
+    color: #0080ff;
+  }
+  .info a:hover{
+    background-color: #F4F4F4;
+  }
+
   section.topics .item-list p{
     display: block;
     color: #252525;
@@ -111,6 +131,25 @@
 
 
 @media screen and (max-width: 767px) {
+  .info h3{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 0 .5rem 0;
+    border-bottom: #E5E5E5 2px solid;
+  }
+  .info h3 i{
+    margin: 0 .5rem;
+  }
+  .info a{
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    margin-top: .25rem;
+    padding: .75rem 0 0 1rem;
+    color: #0080ff;
+  }
+
+
   section.topics .headimg{
     display: none;
   }

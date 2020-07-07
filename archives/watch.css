@@ -233,6 +233,7 @@ input[name="tab_item"] {
 }
 
 @media screen and (max-width: 767px) {
+
   .main h1{
     margin: 15px 5px 0 15px;
     font-size: 18px;

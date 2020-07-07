@@ -6,6 +6,11 @@ body{
 header{
   background: #272727;
 }
+.dispnone{
+  display: none;
+}
+
+
 
 
 @media screen and (min-width: 1024px) {
