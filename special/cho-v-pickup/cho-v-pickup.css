@@ -1,0 +1,76 @@
+body{
+  background-image: url("/special/cho-v-pickup/bg.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50% top;
+}
+
+.main div{
+  background-color:rgba(255,255,255,0.5);
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 0.5rem;
+}
+.main .top, #index{
+  text-align: center;
+}
+.main .top p{
+  margin: 1rem;
+}
+.main .top h1{
+  margin: 1rem auto !important;
+  font-weight: bold;
+  font-size: 24px;
+}
+.red {
+  color: red;
+}
+
+.main #index a{
+  display: inline-block;
+  margin: auto 1rem;
+}
+.main #index a:hover{
+  text-decoration: underline;
+}
+.main #index a::before{
+  content:"▶";
+  margin: auto 1px;
+}
+
+h2{
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 5px;
+  margin-bottom: .75rem;
+  border-left: 3px red solid;
+}
+#about p, #howto p, #schedule p{
+  margin: 0.75rem auto;
+  line-height: 1.5;
+}
+
+.main ul, .main ol {
+  padding: 0.5em 0.5em 0.5em 2em;
+}
+.main ul li,.main ol li {
+  line-height: 1.5;
+  padding: 0.5rem 0;
+  list-style-type: disc;
+}
+
+.form{
+  display: inline-block;
+  margin: 1rem auto;
+  text-align: center;
+  background-color: #06c;
+  padding: 0.5rem 2rem;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 5px;
+  line-height: 36px;
+}
+.form:hover{
+  background-color: #0080ff !important;
+}
