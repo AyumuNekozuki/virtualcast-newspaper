@@ -9,6 +9,9 @@ header{
 .dispnone{
   display: none;
 }
+.hide{
+  display: none !important;
+}
 
 
 
