@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2020年09月28日 - Vキャス新聞</title>
+
+  <!-- use thirdparty-->
+  <link rel="stylesheet" href="/destyle.css">
+  <link rel="stylesheet" href="/common/jquery-3.5.1.min.js">
+  <link rel="stylesheet" href="/viewer.min.css">
+  <script src="/viewer.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
+
+  <!-- meta data -->
+  <meta name="description" content="その週のVキャスでの出来事・ニュースを新聞形式でお届けします！">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@nekozuki_dev" />
+  <meta property="og:url" content="https://vcnp.nekozuki.me/archives" />
+  <meta property="og:title" content="2020年09月28日 - Vキャス新聞" />
+  <meta property="og:description" content="その週のVキャスでの出来事・ニュースを新聞形式でお届けします！" />
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://vcnp.nekozuki.me/archives/20200928/head.png" />
+  <link rel="icon" href="favicon.ico">
+
+  <!--user style-->
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/archives/watch.css">
+  <link rel="stylesheet" href="/font/icomoon-style.css" />
+  <script src="/common/include.js"></script>
+
+</head>
+
+<body>
+  <script type="text/javascript">
+    include("/common/header.html");
+  </script>
+  <div class="main">
+
+    <h1>2020年09月28日</h1>
+    <div class="watch">
+      <ul id="images">
+        <li><img src="https://media.discordapp.net/attachments/653883136631111681/760249878718447636/1p.png"></li>
+        <li class="sp"><img src="https://media.discordapp.net/attachments/653883136631111681/760249889635696707/3.png"></li>
+        <li class="sp"><img src="https://media.discordapp.net/attachments/653883136631111681/760249895692533770/4p2.png"></li>
+      </ul>
+      <script>
+        var viewer = new Viewer(document.getElementById('images')); //任意でid名を指定
+      </script>
+      <p><i class="fas fa-search-plus"></i>画像クリックで拡大します</p>
+    </div>
+
+    <div class="tabs">
+      <input id="topics" type="radio" name="tab_item" checked>
+      <label class="tab_item" for="topics">TOPICS</label>
+      <!--
+      <input id="vci" type="radio" name="tab_item">
+      <label class="tab_item" for="vci">関連VCI</label>
+      -->
+      <input id="nico" type="radio" name="tab_item">
+      <label class="tab_item" for="nico">関連動画・生放送</label>
+      <!--
+      <input id="url" type="radio" name="tab_item">
+      <label class="tab_item" for="url">関連URL</label>
+      -->
+
+      <section class="tab_content" id="topics_content">
+        <h2>TOPICS</h2>
+        <div class="item-list">
+          <p>ネイルさん独占インタビュー「配信で悩んでいる人が訊いてみたい事！」</p>
+          <p><span>社説</span>VCI有料化</p>
+          <p><span>マンガ</span>残り26日...！「100日後にバズるにし」</p>
+          <p><span>お知らせ</span>今回から4面の担当が変更になります。</p>
+        </div>
+      </section>
+
+      <section class="tab_content" id="vci_content">
+        <h2>関連VCI</h2>
+        <div class="item-box">
+          <iframe
+            src="https://hatenablog.com/embed?url=https://seed.online/products/67a01e012386477f477148ae76be7edd53990dd0ba42ecf0f4a96c02fc2f9eab"
+            frameborder="0"></iframe>
+          <iframe
+            src="https://hatenablog.com/embed?url=https://seed.online/products/09e18f1ef75b22ccb7e2470aa9adfbceccec253879583a5369fa66e854bfe3c3"
+            frameborder="0"></iframe>
+        </div>
+      </section>
+
+      <section class="tab_content" id="nico_content">
+        <h2>関連動画・生放送</h2>
+        <div class="item-box">
+          <iframe width="312" height="176" src="https://live.nicovideo.jp/embed/lv328181444" scrolling="no"
+            style="border:solid 1px #d0d0d0; background-color: #f6f6f6;" frameborder="0"></iframe>
+        </div>
+      </section>
+
+      <section class="tab_content" id="url_content">
+        <h2>関連URL</h2>
+        <div class="item-list">
+          <a href="https://twitter.com/kiliglow11/status/1304732738172444672?s=20"><i class="fab fa-twitter"></i>綺里さん 30時間生放送</a>
+          <a href="https://www.nicovideo.jp/user/34368477"><span>PICKUP</span><i class="icon2-niconico"></i>みいさん niconicoユーザーページ</a>
+        </div>
+      </section>
+
+      <!-- AddToAny BEGIN -->
+      <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+        <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+        <a class="a2a_button_twitter"></a>
+        <a class="a2a_button_facebook"></a>
+        <a class="a2a_button_line"></a>
+        <a class="a2a_button_hatena"></a>
+        <a class="a2a_button_copy_link"></a>
+      </div>
+      <script async src="https://static.addtoany.com/menu/page.js"></script>
+      <!-- AddToAny END -->
+
+    </div>
+  </div>
+
+
+
+  </div>
+  <script type="text/javascript">
+    include("/common/footer.html");
+  </script>
+</body>
+
+</html>
