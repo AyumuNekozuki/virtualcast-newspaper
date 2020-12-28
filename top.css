@@ -1,4 +1,10 @@
 @media screen and (min-width: 768px) {
+  section.topics,section.newest_list{
+    background-image: url(/common/spin-gray.svg);
+    background-position: center center;
+    background-size: 15%;
+    background-repeat: no-repeat;
+  }
   section.topics .headimg{
     float: right;
   }
@@ -7,6 +13,7 @@
     height: 300px;
   }
   section.topics .item-list{
+    width: calc(100% - 300px);
     min-height: 250px;
   }
 
@@ -18,10 +25,15 @@
     margin: 20px 5px;
   }
   section h2{
-    font-size: 32px;
+    font-size: 28px;
     border-left: #252525 5px solid;
     padding-left: 7px;
     margin-bottom: 0.5em;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 500;
+  }
+  section h2.date{
+    font-weight: 800;
   }
 
   .info h3{
@@ -31,6 +43,13 @@
   }
   .info h3 i{
     margin: 0 .5rem;
+  }
+  .info p{
+    display: inline-block;
+    width: 100%;
+    font-size: 16px;
+    margin-top: .25rem;
+    padding: .75rem 0 .75rem 1rem;
   }
   .info a{
     display: inline-block;
@@ -43,16 +62,10 @@
   .info a:hover{
     background-color: #F4F4F4;
   }
-  .info p.text{
-    display: inline-block;
-    width: 100%;
-    font-size: 16px;
-    margin-top: .25rem;
-    padding: .75rem 0 .75rem 1rem;
-  }
 
   section.topics .item-list p{
     display: block;
+    background-color: white;
     color: #252525;
     padding: 16px 24px 16px 8px;
     border-bottom: 1px solid #e5e5e5;
@@ -66,23 +79,66 @@
     padding: 0 3px;
     margin: 0 5px ;
   }
-  section.topics .item-list p:last-child{
+  section.topics .item-list a:last-child{
+    line-height: initial;
+
     display: block;
     color: #252525;
-    padding: 16px 24px 16px 8px;
-    border-bottom: none;
+    margin-left:auto;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    width: 125px;
+    padding: 8px 24px 8px 8px;
     text-align: right;
-  }
-  section.topics .item-list a{
     color: #fff !important;
     background-color: #06c;
-    padding: 8px 24px 8px 24px;
-    margin-right: 24px;
     border-radius: 4px;
   }
   section.topics .item-list a:hover{
     color: #fff;
     background-color: #0080ff !important;
+  }
+
+
+  .newest_list{
+    margin: 20px 5px;
+    min-height: 300px;
+  }
+  .newest_list h2 a:hover{
+    color: #0080ff;
+    text-decoration: underline;
+  }
+  .newest_list h2 span{
+    font-size: 12px;
+    border: 1px solid #252525;
+    padding:1px 3px;
+    border-radius: 5px;
+  }
+
+  .newest_list .article{
+    display: inline-block;
+    width: calc((100% / 5));
+    height: auto;
+    margin: auto auto;
+    padding: 0 7.5px;
+  }
+  .newest_list .article_img{
+    background-image: url(/common/spin-gray.svg);
+    background-position: center center;
+    background-size: 15%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  .newest_list p{
+    margin: 5px;
+    font-size: 20px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 500;
+  }
+  .newest_list .article:hover p{
+    color: #0080ff;
   }
 
   section.about p{
@@ -138,6 +194,10 @@
 
 
 @media screen and (max-width: 767px) {
+  .newest_list{
+    display: none;
+  }
+
   .info h3{
     font-size: 16px;
     font-weight: bold;
@@ -146,6 +206,13 @@
   }
   .info h3 i{
     margin: 0 .5rem;
+  }
+  .info p{
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    margin-top: .25rem;
+    padding: .75rem 0 0 1rem;
   }
   .info a{
     display: inline-block;
@@ -156,6 +223,12 @@
     color: #0080ff;
   }
 
+  section.topics{
+    background-image: url(/common/spin-gray.svg);
+    background-position: center center;
+    background-size: 15%;
+    background-repeat: no-repeat;
+  }
 
   section.topics .headimg{
     display: none;
@@ -176,10 +249,15 @@
     font-weight: bold;
   }
 
+  section.topics .item-list{
+    min-height: 200px;
+  }
+
   section.topics .item-list p{
     font-size: 14px;
     display: block;
     color: #252525;
+    background-color: white;
     padding: 8px;
     border-bottom: 1px solid #e5e5e5;
     line-height: initial;
@@ -192,19 +270,20 @@
     padding: 0 3px;
     margin: 0 5px ;
   }
-  section.topics .item-list p:last-child{
-    display: block;
-    color: #252525;
-    padding: 16px 24px 16px 8px;
-    border-bottom: none;
-    text-align: right;
-  }
   section.topics .item-list a{
+    margin-left:auto;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    width: 125px;
     color: #fff !important;
     background-color: #0080ff;
-    padding: 8px 24px 8px 24px;
     border-radius: 4px;
     font-weight: bold;
+    display: block;
+    color: #252525;
+    padding: 12px 24px 12px 8px;
+    border-bottom: none;
+    text-align: right;
   }
 
   section.about p{

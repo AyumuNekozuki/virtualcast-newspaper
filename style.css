@@ -3,9 +3,7 @@ body{
   background: #F4F4F4;
   font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Hiragino Kaku Gothic ProN,Meiryo,sans-serif;
 }
-header{
-  background: #272727;
-}
+
 .dispnone{
   display: none;
 }
@@ -14,9 +12,12 @@ header{
 }
 
 
-
-
 @media screen and (min-width: 1024px) {
+  header{
+    background: #272727;
+    height: 100px;
+  }
+
   .sp-header{
     display: none;
   }
@@ -180,6 +181,11 @@ footer small{
 }
 
 @media screen and (min-width: 426px) and (max-width: 1023px) {
+  header{
+    background: #272727;
+    height: 100px;
+  }
+
   /*site-header*/
   input.sp-menu-check{
     display: none;
@@ -371,6 +377,10 @@ footer small{
 }
 
 @media screen and (max-width: 425px) {
+  header{
+    background: #272727;
+    height: 44px;
+  }
 
     /*site-header*/
 
