@@ -2,6 +2,19 @@ hr{
   border: 0.25px solid #E5E5E5;
   margin: 0.5em 0;
 }
+.midashi{
+  margin:16px auto;
+  background: linear-gradient(0deg, #bae4f8, #bae4f8 50%, transparent 50%, transparent 100%);
+  font-weight: bold;
+}
+section ul{
+  margin: 16px;
+}
+section ul li{
+  padding: 4px 24px 4px 8px;
+  margin-left: 16px;
+  list-style-type: disc;
+}
 
 .headimg{
   text-align: center;
