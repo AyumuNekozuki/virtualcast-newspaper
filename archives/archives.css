@@ -1,3 +1,49 @@
+/*firebase化*/
+/*firebase化追記分*/
+h1{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 800;
+}
+h2{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 500;
+}
+
+#more button{
+  z-index: 10000;
+  display: block;
+  margin: 1rem auto;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #06c;
+  color: white;
+  border-radius: 20px;
+  line-height: 40px;
+  letter-spacing: .5px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 25%);
+}
+#more button:hover{
+  background-color: #0080ff;
+}
+section.topics {
+  opacity: 1;
+  transition: all 0.4s ease 0s;
+}
+section.topics.is-hidden {
+  opacity: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+section.topics.is-hidden *{
+  display: none;
+}
+
+/*ここまで*/
+
+
 @media screen and (min-width: 768px) {
   .main h1{
     margin: 15px 5px 0 15px;
@@ -21,6 +67,12 @@
   /*topics*/
   section.topics .headimg{
     float: right;
+    width: 260px;
+    height: 300px;
+    background-image: url(/common/spin-gray.svg);
+    background-position: center center;
+    background-size: 20%;
+    background-repeat: no-repeat;
   }
   section.topics .headimg img{
     width: 260px;
