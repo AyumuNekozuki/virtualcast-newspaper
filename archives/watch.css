@@ -1,3 +1,22 @@
+/*firebase化追記分*/
+h1{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 800;
+}
+h2{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 500;
+}
+
+
+
+
+/*ココまで*/
+
+
+
+
+
 .watch p{
   margin: 15px 0;
   color: #666;
@@ -9,6 +28,7 @@
 section#url_content i{
   margin: 0 5px ;
 }
+
 
 
 
@@ -144,7 +164,7 @@ input[name="tab_item"] {
   .watch ul li{
     height: 100%;
   }
-  .watch ul li.sp{
+  .watch ul li:not(:first-child){
     display: none;
   }
   .watch ul#images img{
@@ -246,7 +266,7 @@ input[name="tab_item"] {
   .watch ul li{
     height: 100%;
   }
-  .watch ul li.sp{
+  .watch ul li:not(:first-child){
     display: none;
   }
   .watch ul#images img{
