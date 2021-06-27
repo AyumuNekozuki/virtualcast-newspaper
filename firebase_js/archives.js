@@ -7,11 +7,6 @@ let id = "";
 
 var database = archives_db.orderBy("date", "desc");
 
-if(page_counter != 0){
-  //仮対応
-
-};
-
 
 database.get().then((querySnapshot) => {
   querySnapshot.forEach((doc) => {

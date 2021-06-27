@@ -1,5 +1,5 @@
 firebase.initializeApp({
-  apiKey: 'AIzaSyC0IHYaMM7BAlNt6aYrW7URnGWrfs5AlzQ',
+  apiKey: 'AIzaSyDxUMa12epLxdwV7UQlsOEiQ_WKl6AGWg8',
   projectId: 'virtualcast-newspaper',
   storageBucket: 'virtualcast-newspaper.appspot.com'
 });
