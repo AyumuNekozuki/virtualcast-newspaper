@@ -1,16 +1,26 @@
 <template>
   <div>
-    <nav-bar />
+    <Header />
     <Nuxt />
+    <Footer />
   </div>
 </template>
 
 <script>
-import NavBar from '@/components/NavBar.vue';
+import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
   components:{
-    NavBar,
+    Header,
+    Footer
   }
 }
 </script>
+
+<style>
+body{
+  box-sizing: border-box;
+  background: #F2F5F7;
+}
+</style>

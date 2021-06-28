@@ -1,12 +1,14 @@
 <template>
-  <div class="pages_container">
+  <div class="index">
     <div class="info">
       <a :href="news_href">{{ news_data }}</a>
     </div>
 
     <section class="newest_contents">
       <div class="headimg">
+        <!--
         <img :src="newest_img">
+        -->
       </div>
       <h2 class="date">{{ newest_date }}</h2>
       <ul class="topics_list">
@@ -46,7 +48,6 @@
 </template>
 
 <script>
-import func from 'vue-editor-bridge';
 import firebase from "~/plugins/firebase";
 
 const db = firebase.firestore();
