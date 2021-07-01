@@ -11,7 +11,7 @@ export default {
       { hid: 'description', name: 'description', content: '１週間のVキャスでの出来事を新聞としてお届け！' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/nuxt_favicon.ico' }
     ]
   },
 
@@ -22,6 +22,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: '~/plugins/jquery_init.js', ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -50,5 +51,11 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  loading: {
+    color: 'mediumaquamarine',
+    failedColor: 'red',
+    height: '3px'
   }
 }

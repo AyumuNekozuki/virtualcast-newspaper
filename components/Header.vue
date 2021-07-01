@@ -63,6 +63,7 @@
             </a>
           </div>
           <div class="wrap_right">
+            <nuxt-link to="/admin">管理者ログイン</nuxt-link>
             <a
               href="https://seed.online/products/375e29f8544b8fd86bc40458f4f1cbbf93f4996296d6d370f378c2cf4c48ea1d"
               target="_blank">Vキャスで読む<font-awesome-icon :icon="['fas','external-link-alt']" />
@@ -83,7 +84,7 @@ header {
   display: flex;
   flex-direction: column-reverse;
   margin: 0 auto;
-  max-width: 1152px;
+  max-width: 1336px;
 }
 
 .navigation .wrap.solid {
@@ -91,7 +92,7 @@ header {
   justify-content: space-between;
   height: 32px;
 }
-.navigation .wrap.solid .wrap_left {
+.navigation .wrap.solid div {
   display: flex;
 }
 
@@ -102,7 +103,10 @@ header {
   padding: 0 0.75em;
   position: relative;
 }
-.navigation .wrap.solid .wrap_left a:not(:last-child)::after {
+.navigation .wrap.solid a.disabled{
+  cursor: not-allowed;
+}
+.navigation .wrap.solid a:not(:last-child)::after {
   content: "";
   border-right: 0.5px solid #555;
   width: 1px;
