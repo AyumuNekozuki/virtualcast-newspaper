@@ -5,9 +5,18 @@
 </template>
 
 <script>
-export default {
+let newest_id;
 
+export default {
+  head () {
+    return {
+      titleTemplate: null,
+      title: 'Vキャス新聞',
+    }
+  },
 }
+
+
 </script>
 
 <style>

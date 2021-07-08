@@ -50,10 +50,11 @@
 </style>
 
 <script>
-  import firebase from "~/plugins/firebase";
+import Meta from '~/mixins/meta';
+import firebase from "~/plugins/firebase";
 
-  const db = firebase.firestore();
-  const news_db = db.collection("news");
+const db = firebase.firestore();
+const news_db = db.collection("news");
 
 export default {
   async asyncData() {
@@ -82,6 +83,17 @@ export default {
 
     return{
       news_data
+    }
+  },
+  mixins: [Meta], 
+  data() {
+    return {
+      meta: {
+        title: "お知らせ" ,
+        description: 'Vキャス新聞からのお知らせです。',
+        type: 'article',
+        url: 'https://vcnp.nekozuki.me/news',
+      },
     }
   }
 }

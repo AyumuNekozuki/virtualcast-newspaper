@@ -1,14 +1,23 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Vキャス新聞',
     htmlAttrs: {
+      prefix: 'og: http://ogp.me/ns#',
       lang: 'ja'
     },
+    titleTemplate: '%s - Vキャス新聞',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '１週間のVキャスでの出来事を新聞としてお届け！' }
+      { hid: 'description', name: 'description', content: '１週間のVキャスでの出来事を新聞としてお届け！' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'Vキャス新聞' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: 'https://vcnp.nekozuki.me' },
+      { hid: 'og:title', property: 'og:title', content: 'Vキャス新聞' },
+      { hid: 'og:description', property: 'og:description', content: '１週間のVキャスでの出来事を新聞としてお届け！' },
+      //{ hid: 'og:image', property: 'og:image', content: 'https://example.com/img/ogp/common.jpg' },
+      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:site', content: '@nekozuki_dev' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/nuxt_favicon.ico' }
