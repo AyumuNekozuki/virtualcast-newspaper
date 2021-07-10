@@ -5,6 +5,11 @@
 </template>
 
 <script>
+import firebase from "~/plugins/firebase";
+
+const db = firebase.firestore();
+const archives_db = db.collection("archives");
+
 let newest_id;
 
 export default {
@@ -14,6 +19,22 @@ export default {
       title: 'Vキャス新聞',
     }
   },
+  async asyncData({redirect}){
+    const querySnapshot = await archives_db
+      .orderBy("date", "desc")
+      .limit(1)
+      .get()
+      .catch(function (error) {
+        console.error("firestore: archives: " + error);
+      });
+
+    querySnapshot.forEach((doc) => {
+      newest_id = doc.id;
+    });
+
+    var newest_href = "/archives/" + newest_id;
+    redirect(302, newest_href);
+  }
 }
 
 

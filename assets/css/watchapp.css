@@ -1,0 +1,131 @@
+#WatchApp .hide{
+  display: none !important;
+}
+
+/* watch area */
+.watch_area{
+  display: flex;
+  justify-content: center;
+  height: 30vh;
+}
+.watch_imgs{
+  display: block;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  padding: 0 .25em;
+}
+#WatchApp .message{
+  color: #666;
+  text-align: center;
+  margin: 2em 0 1em;
+}
+
+/* tab area */
+#WatchApp .tab_area{
+  margin: 2em;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 25%);
+  border-radius: 5px;
+}
+#WatchApp .tab_area .tab_wrap{
+  display: flex;
+  flex-direction: row;
+}
+#WatchApp .tab_area .tab_wrap button{
+  padding: 1em 2em;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+  color: #666;
+}
+#WatchApp .tab_area .tab_wrap button:hover:not(:disabled){
+  background-color: #ddd;
+}
+#WatchApp .tab_area .tab_wrap button.active{
+  background-color: white;
+  color: black;
+  cursor: default;
+}
+#WatchApp .tab_area .tab_wrap button.active:hover{
+  background-color: white;
+}
+#WatchApp .tab_area .tab_wrap button:disabled{
+  color: #ccc;
+  cursor: default;
+}
+
+#WatchApp .tab_area .section_wrap{
+  background-color: white;
+  padding: 1em 2em;
+}
+#WatchApp .tab_area .share_area{
+  background-color: white;
+  padding: 1em 2em;
+  border-radius: 0 0 5px 5px;
+}
+
+#WatchApp .section_wrap .tab_content h2{
+  font-size: 22px;
+  font-weight: bold;
+  margin: .5em 0;
+}
+#WatchApp .section_wrap .tab_content .item_list{
+  display: flex;
+  flex-direction: column;
+}
+#WatchApp .section_wrap .tab_content .item_list p{
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0 25px;
+  padding: 1em .5em;
+  border-bottom: 1px solid #ddd;
+}
+#WatchApp .section_wrap .tab_content .item_list p span{
+  font-size: 80%;
+  border: 1px solid #555;
+  margin: 0 .5em 0 0;
+  padding: .25em;
+  border-radius: 5px;
+}
+#WatchApp .section_wrap .tab_content .item_list a{
+  color: #0080ff;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0 25px;
+  padding: 1em .5em;
+  border-bottom: 1px solid #ddd;
+}
+#WatchApp .section_wrap .tab_content .item_list a:hover{
+  text-decoration: underline;
+}
+#WatchApp .section_wrap .tab_content .item_list a:not([href]){
+  display: none;
+}
+
+#WatchApp .section_wrap .tab_content .iframe_list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#WatchApp .section_wrap .tab_content .iframe_list *{
+  width: calc(100% / 2);
+  padding: .25em;
+}
+
+#WatchApp .section_wrap .tab_content#nico_content .iframe_list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#WatchApp .section_wrap .tab_content#nico_content .iframe_list iframe{
+  border: none;
+  padding: 0;
+  margin: .25em;
+  width: calc((100% / 3) - .6em);
+  min-height: 176px;
+}
+#WatchApp .section_wrap .tab_content#nico_content .iframe_list iframe:not([src]){
+  display: none;
+}

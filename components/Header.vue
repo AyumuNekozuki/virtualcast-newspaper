@@ -41,7 +41,7 @@
                 </svg>
               </nuxt-link>
             </h1>
-            <nuxt-link class="header_links" to="/archives">アーカイブ</nuxt-link>
+            <a class="header_links" href="/archives">アーカイブ</a>
             <nuxt-link class="header_links" to="/special">特集一覧</nuxt-link>
             <nuxt-link class="header_links" to="/about">Vキャス新聞とは</nuxt-link>
           </div>

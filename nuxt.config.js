@@ -20,13 +20,20 @@ export default {
       { name: 'twitter:site', content: '@nekozuki_dev' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/nuxt_favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/nuxt_favicon.ico' },
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.0/viewer.min.css' }
+    ],
+    script:[
+      {src: 'https://cdn.iframe.ly/embed.js?api_key=2e3587807406fa2350bd4d', body: true},
+      {src: 'https://static.addtoany.com/menu/page.js', async: true, body: true},
+      {src: 'https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.0/viewer.min.js'}
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    'destyle.css'
+    'destyle.css',
+    '~/assets/css/watchapp.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
