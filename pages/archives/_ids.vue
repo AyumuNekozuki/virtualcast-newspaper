@@ -181,7 +181,9 @@ export default {
     function watch_get_img(){
 
       storageRef.child('archives/'+ archives_id_img +'/' + (count + 1) +'.png').getDownloadURL().then(function(imgdata) {
-        $('.watch_area').append("<img class='watch_imgs' src='"+ imgdata + "'>");
+        if(!($('img[src="'+ imgdata +'"').length)){
+          $('.watch_area').append("<img class='watch_imgs' id='pages_"+ count +"' src='"+ imgdata + "'>");
+        }
       }).catch(function(error){
         console.error('storage :'+ error);
         $('.watch_area').append("<img src='~/assets/alicia_ng.png' alt='error!'>");
