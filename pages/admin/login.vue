@@ -7,7 +7,7 @@
 
 <script>
 import Meta from '~/mixins/meta';
-import Auth from "~/components/Auth.vue";
+import Auth from "~/components/auth.vue";
 
 export default {
   mixins: [Meta], 
