@@ -54,7 +54,7 @@
             </div>
           </section>
         </div>
-        <div class="share_area">
+        <div class="share_area" id="addtoany_init">
           <!-- AddToAny BEGIN -->
           <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
             <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
@@ -65,17 +65,13 @@
             <a class="a2a_button_mastodon"></a>
             <a class="a2a_button_copy_link"></a>
           </div>
-          <script>
-            var a2a_config = a2a_config || {};
-            a2a_config.locale = 'ja';
-          </script>
           <!-- AddToAny END -->
         </div>
       </div>
     </div>
   </div>
 </template>
-
+  
 <style>
 /** 共通 */
 div.pages_container {
@@ -94,15 +90,11 @@ div.pages_container {
 <script>
 import Meta from '~/mixins/meta';
 import firebase from "~/plugins/firebase";
-//import Viewer from "v-viewer";
-//import Vue from "vue";
 
 const db = firebase.firestore();
 const archives_db = db.collection("archives");
 const storage = firebase.storage();
 const storageRef = storage.ref();
-
-//Vue.use(Viewer);
 
 let title, archives_id;
 let is_data = {
@@ -114,23 +106,38 @@ let is_data = {
 export default {
   async asyncData({ params }){
     archives_id = params.ids + "";
-    const document = await archives_db.doc(archives_id).get();
-    let archive_doc_data = document.data();
+    const document = await archives_db.doc(archives_id).get()
+      .catch(function(error){
+        this.$nuxt.error({
+          statusCode: 404,
+          message: error
+        });
+      });
+    let archive_doc_data = {
+      pages: 0,
+      topics_01: undefined
+    }
+
+    if(typeof archive_doc_data !== 'undefined'){
+      archive_doc_data = document.data();
+    }
 
     var arr = (archives_id.substr(0, 4) + "/" + archives_id.substr(4, 2) + "/" + archives_id.substr(6, 2)).split("/");
     var date = new Date(arr[0], arr[1] - 1, arr[2]);
     title = date.getFullYear() + "年" + (date.getMonth() + 1) + "月" + date.getDate() + "日";
 
-
     //disabled
-    if(archive_doc_data.vci_01 == undefined){
-      is_data.vci = false;
-    }
-    if(archive_doc_data.url_01 == undefined){
-      is_data.url = false;
+    if(typeof archive_doc_data !== 'undefined'){
+      if(archive_doc_data.vci_01 == undefined){
+        is_data.vci = false;
+      }
+      if(archive_doc_data.url_01 == undefined){
+        is_data.url = false;
+      }
     }
 
     archive_doc_data.pages = "pages_" + archive_doc_data.pages;
+
 
     return{
       title,
@@ -151,8 +158,7 @@ export default {
     }
   },
   mounted(){
-    const mounted_counter = 1;
-    if((process.client) && (mounted_counter === 1)){
+    if(process.client){
       var count = 0;
       var check_count_id = $('.watch_area').attr("id");
       var check_count = check_count_id + "";
@@ -166,7 +172,13 @@ export default {
         };
       },500);
 
-      var viewerinit = "<script>var viewer = new Viewer(document.getElementById('"+ check_count_id +"'));<" + "/" + "script>";
+      var addtoany_init = "<script>var a2a_config = a2a_config || {};a2a_config.locale = 'ja';<"+ "/script><script src='https://static.addtoany.com/menu/page.js'><" + "/script>";
+      $('#addtoany_init').append(addtoany_init);
+
+      var embedjs_init = "<script async charset='utf-8' src='//cdn.iframe.ly/embed.js?api_key=2e3587807406fa2350bd4d'><" + "/script>";
+      $('.section_wrap').append(embedjs_init);
+
+      var viewerinit = "<script>var viewer = new Viewer(document.getElementById('"+ check_count_id +"'));<" + "/script>";
       setTimeout(function(){
         $('.tabitem').append(viewerinit);
       },2250);

@@ -1,31 +1,55 @@
 <template>
   <div class="ErrorPage">
-    <main class="ErrorPage_content">
-      <section v-if="error.statusCode === 404">
-        <h2>404 - Page Not Found</h2>
-        <p>ページが見つかりませんでした。</p>
-        <div class="error_icon"></div>
-        <nuxt-link to="/">TOP</nuxt-link>
-      </section>
-      <section v-if="(!(error.statusCode === 404))">
-        <h2>Error!</h2>
-        <p>エラーが発生しました。</p>
-        <div class="error_icon"></div>
-        <nuxt-link to="/">TOP</nuxt-link>
-      </section>
-    </main>
+    <div class="ErrorPage_wrap">
+      <main class="ErrorPage_content">
+        <section v-if="error.statusCode === 404">
+          <h2>404 - Page Not Found</h2>
+          <p>ページが見つかりませんでした。</p>
+          <div class="error_icon"></div>
+          <nuxt-link to="/">TOP</nuxt-link>
+        </section>
+        <section v-if="error.statusCode === 418">
+          <h2>418 - I'm a teapot</h2>
+          <p>私はコーヒが苦手なの！</p>
+          <div class="error_icon"></div>
+          <p></p>
+          <nuxt-link to="/">TOP</nuxt-link>
+        </section>
+        <section v-if="error.statusCode === 503">
+          <h2>503 - Service Unavailable</h2>
+          <p>現在メンテナンス中です。</p>
+          <div class="error_icon"></div>
+          <p></p>
+          <nuxt-link to="/">TOP</nuxt-link>
+        </section>
+        <section v-if="(!((error.statusCode === 404) || (error.statusCode === 418) || (error.statusCode === 503)))">
+          <h2>Error!</h2>
+          <p>エラーが発生しました。</p>
+          <div class="error_icon"></div>
+          <nuxt-link to="/">TOP</nuxt-link>
+        </section>
+      </main>
+    </div>
+
   </div>
 </template>
 
 <script>
 export default {
   name: 'error',
-  props: ['error']
+  props: ['error'],
+  head(){
+    return {
+      titleTemplate: null,
+      title: 'Vキャス新聞',
+    }
+  }
+
 }
 </script>
 
 <style>
-.ErrorPage{
+.ErrorPage_wrap{
   display: flex;
   justify-content: center;
 }

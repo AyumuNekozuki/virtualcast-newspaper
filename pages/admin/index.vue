@@ -6,18 +6,21 @@
 
 <script>
 import Meta from '~/mixins/meta';
-
 export default {
   mixins: [Meta], 
-  data() {
+  data(){
+    this.$nuxt.error({
+      statusCode: 503
+    });
+
     return {
       meta: {
-        title: "Admin" ,
-        description: '',
-        type: 'pages',
+        title: "記事管理" ,
+        description: "",
+        type: 'page',
         url: 'https://vcnp.nekozuki.me/admin',
       },
     }
-  },
+  }
 }
 </script>

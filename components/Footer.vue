@@ -21,7 +21,7 @@
             </a>
           </div>
           <div class="policy_area">
-            <nuxt-link class="policy" to="/policy#policy">プライバシーポリシー</nuxt-link>
+            <nuxt-link class="policy" to="/policy#data">データ収集について</nuxt-link>
             <nuxt-link class="policy" to="/policy#disclaimer">免責事項</nuxt-link>
           </div>
         </div>
@@ -31,7 +31,7 @@
             <p class="part">主催・2-4面作成・VCI更新</p>
             <p class="name">
               江戸でち
-              <a href="https://twitter.com/eddyyade1" target="_blank" rel="noopener noreferrer">
+              <a href="https://twitter.com/edo_vcas" target="_blank" rel="noopener noreferrer">
                 <font-awesome-icon :icon="['fab','twitter']" />
               </a>
             </p>
@@ -93,6 +93,7 @@ export default {
 .footer{
   background-color: #252525;
   color: white;
+  padding: 1em auto 0;
 }
 .footer_wrap{
   max-width: 1336px;

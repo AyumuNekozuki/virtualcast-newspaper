@@ -15,6 +15,12 @@
 </template>
 
 <style>
+div.pages_container{
+  margin: 0 auto;
+  padding: 1em 2em;
+  max-width: 1336px;
+}
+
 .wide_wraper{
   max-width: 1336px;
   margin: 0 auto;

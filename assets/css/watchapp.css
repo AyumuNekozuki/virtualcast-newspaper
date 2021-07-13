@@ -15,6 +15,10 @@
   object-fit: contain;
   padding: 0 .25em;
 }
+.watch_imgs:hover{
+  opacity: .8;
+  cursor: zoom-in;
+}
 #WatchApp .message{
   color: #666;
   text-align: center;
@@ -110,6 +114,7 @@
 }
 #WatchApp .section_wrap .tab_content .iframe_list *{
   width: calc(100% / 2);
+  min-height: 100px;
   padding: .25em;
 }
 

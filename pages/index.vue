@@ -145,11 +145,15 @@ export default {
 
     function get_newest_thumbnail(){ //新着記事サムネ取得
       var ids = $('section.newest_contents').attr('id');
+      var old_ids = $('.article.card').eq(count).attr('id');
       storageRef.child('archives/'+ ids +'/head.png').getDownloadURL().then(function(imgurl){
-        $('.headimg').append("<img id='newest_thumbnail' src='"+ imgurl + "' alt='"+ ids +"'>");
+        if(!($('img[src="'+ imgurl +'"').length)){
+          $('.headimg').append("<img id='newest_thumbnail' src='"+ imgurl + "' alt='"+ ids +"'>");
+          $('#' + old_ids).prepend("<img id='old_thumbnail' src='"+ imgurl + "' alt='"+ ids +"'>");
+        }
       }).catch(function(error){
         console.error('storage :'+ error);
-        $('.headimg').prepend("<img src='~/assets/alicia_ng.png' alt='error!'>");
+        $('.headimg').prepend("<img src='/_nuxt/assets/alicia_ng.png' alt='error!'>");
       });
     }
 
@@ -157,10 +161,12 @@ export default {
       var old_ids = $('.article.card').eq(count).attr('id');
       var ids = old_ids.substr(4);
       storageRef.child('archives/'+ ids +'/head.png').getDownloadURL().then(function(imgurl){
-        $('#' + old_ids).prepend("<img id='old_thumbnail' src='"+ imgurl + "' alt='"+ ids +"'>");
+        if(!($('img[src="'+ imgurl +'"').length)){
+          $('#' + old_ids).prepend("<img id='old_thumbnail' src='"+ imgurl + "' alt='"+ ids +"'>");
+        }
       }).catch(function(error){
         console.error('storage :'+ error);
-        $('#' + old_ids).prepend("<img src='~/assets/alicia_ng.png' alt='error!'>");
+        $('#' + old_ids).prepend("<img src='/_nuxt/assets/alicia_ng.png' alt='error!'>");
       });
       count = count + 1;
     };

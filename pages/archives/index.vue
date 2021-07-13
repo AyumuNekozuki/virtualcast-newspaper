@@ -152,10 +152,12 @@ export default {
         clearInterval(Interval);
       }else{
         storageRef.child('archives/'+ ids +'/head.png').getDownloadURL().then(function(imgurl){
-          $('.archive_headimg').eq(count - 1).prepend("<img id='old_thumbnail' src='"+ imgurl + "' alt='"+ ids +"'>");
+          if(!($('img[src="'+ imgurl +'"').length)){
+            $('.archive_headimg').eq(count - 1).prepend("<img id='old_thumbnail' src='"+ imgurl + "' alt='"+ ids +"'>");
+          }
         }).catch(function(error){
           console.error('storage :'+ error);
-          $('.archive_headimg').eq(count - 1).prepend("<img src='~/assets/alicia_ng.png' alt='error!'>");
+          $('.archive_headimg').eq(count - 1).prepend("<img src='/_nuxt/assets/alicia_ng.png' alt='error!'>");
         });
         count = count + 1;
       }
