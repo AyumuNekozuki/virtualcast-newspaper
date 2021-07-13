@@ -16,7 +16,7 @@ export default {
     const uiConfig = {
       signInSuccessUrl: "/admin",
       signInOptions: [
-        //firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
         firebase.auth.GithubAuthProvider.PROVIDER_ID
       ]
     };

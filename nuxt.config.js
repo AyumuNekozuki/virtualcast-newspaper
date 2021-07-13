@@ -66,6 +66,17 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend ( config, { isDev, isClient, isServer } ) {
+      if(isServer){
+        config.externals = {
+          '@firebase/app': 'commonjs @firebase/app',
+          '@firebase/auth': 'commonjs @firebase/auth',
+          '@firebase/firestore': 'commonjs @firebase/firestore',
+          '@firebase/storage': 'commonjs @firebase/storage',
+          '@firebase/analytics': 'commonjs @firebase/analytics',
+        }
+      }
+    }
   },
 
   loading: {
