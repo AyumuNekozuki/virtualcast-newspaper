@@ -10,7 +10,7 @@
         </section>
         <section v-if="error.statusCode === 418">
           <h2>418 - I'm a teapot</h2>
-          <p>私はコーヒが苦手なの！</p>
+          <p>私はコーヒーが苦手なの！</p>
           <div class="error_icon"></div>
           <p></p>
           <nuxt-link to="/">TOP</nuxt-link>

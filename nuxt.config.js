@@ -31,7 +31,8 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     'destyle.css',
-    '~/assets/css/watchapp.css'
+    '~/assets/css/watchapp.css',
+    '~/assets/css/console.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

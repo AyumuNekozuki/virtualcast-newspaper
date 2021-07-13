@@ -21,8 +21,10 @@
             </a>
           </div>
           <div class="policy_area">
+            <nuxt-link class="policy" to="/policy#privacy">プライバシポリシー</nuxt-link>
             <nuxt-link class="policy" to="/policy#data">データ収集について</nuxt-link>
             <nuxt-link class="policy" to="/policy#disclaimer">免責事項</nuxt-link>
+            <a href="https://vcnp.statuspage.io">サーバーステータス</a>
           </div>
         </div>
         <div class="credit_area">

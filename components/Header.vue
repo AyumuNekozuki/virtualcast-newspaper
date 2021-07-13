@@ -63,7 +63,7 @@
             </a>
           </div>
           <div class="wrap_right">
-            <nuxt-link to="/admin">管理者ログイン</nuxt-link>
+            <nuxt-link to="/admin/login">管理者ログイン</nuxt-link>
             <a
               href="https://seed.online/products/375e29f8544b8fd86bc40458f4f1cbbf93f4996296d6d370f378c2cf4c48ea1d"
               target="_blank">Vキャスで読む<font-awesome-icon :icon="['fas','external-link-alt']" />

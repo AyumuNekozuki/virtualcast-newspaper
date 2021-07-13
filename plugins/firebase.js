@@ -1,6 +1,7 @@
-import firebase from 'firebase/app'
-import firestore from 'firebase/firestore'
-import storage from 'firebase/storage'
+import firebase from 'firebase/app';
+import firestore from 'firebase/firestore';
+import storage from 'firebase/storage';
+import analytics from 'firebase/analytics';
 
 if (!firebase.apps.length) {
   firebase.initializeApp(
@@ -13,7 +14,8 @@ if (!firebase.apps.length) {
       appId: "1:807682455880:web:e4e8a4b50bf94ba3475b7d",
       measurementId: "G-T446LZ02QS"
     }
-  )
+  );
+  firebase.analytics();
 }
 
 export default firebase
