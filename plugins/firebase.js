@@ -1,4 +1,5 @@
 import firebase from 'firebase/app';
+import auth from 'firebase/auth';
 import firestore from 'firebase/firestore';
 import storage from 'firebase/storage';
 import analytics from 'firebase/analytics';

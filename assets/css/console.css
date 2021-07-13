@@ -1,10 +1,74 @@
 .admin_container{
   width: 100%;
   margin: 0 auto;
-  padding: 20px;
 }
 
-.admin_container h1{
+.admin_header{
+  box-shadow: 0px 3px 16px -6px rgba(0,0,0,0.6);
+  padding: 1em;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin_header .title_area{
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  height: 35px;
+  align-items: center;
+}
+.admin_header .title_area h1{
+  display: inline;
   font-size: 22px;
   font-weight: bold;
+}
+.admin_header .login_area{
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  height: 35px;
+  align-items: center;
+}
+.admin_header .login_area>div{
+  display: flex;
+  justify-content: flex-end
+}
+.admin_header .login_area p{
+  padding: .5em 1em;
+  margin: 0 .25em;
+}
+.admin_header .login_area a,
+.admin_header .login_area button{
+  padding: .5em 1em;
+  margin: 0 .5em;
+  background-color: #0080ff;
+  border-radius: 5px;
+  color: white;
+}
+.admin_header .login_area a:hover,
+.admin_header .login_area button:hover{
+  opacity: .8;
+}
+
+.admin_container main{
+  margin: 2em;
+}
+
+
+main .no_login{
+  display: flex;
+  margin: 3em;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .no_login h2{
+  font-size: 24px;
+  font-weight: bold;
+}
+main .no_login img{
+  width: 150px;
+  margin: 1em;
 }

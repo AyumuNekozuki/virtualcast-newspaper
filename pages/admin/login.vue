@@ -1,13 +1,14 @@
 <template>
   <div class="admin_container">
-    <h1>管理コンソール ログイン</h1>
-    <auth />
+    <admin-header />
+    <Auth />
   </div>
 </template>
 
 <script>
 import Meta from '~/mixins/meta';
 import Auth from "~/components/auth.vue";
+import admin_header from "~/components/admin_header.vue";
 
 export default {
   mixins: [Meta], 
@@ -22,7 +23,8 @@ export default {
     }
   },
   components: {
-    Auth
+    Auth,
+    admin_header
   }
 }
 </script>

@@ -14,7 +14,7 @@ export default {
     require("firebaseui/dist/firebaseui.css");
 
     const uiConfig = {
-      signInSuccessUrl: "/",
+      signInSuccessUrl: "/admin",
       signInOptions: [
         //firebase.auth.GoogleAuthProvider.PROVIDER_ID,
         firebase.auth.GithubAuthProvider.PROVIDER_ID
@@ -23,6 +23,10 @@ export default {
 
     const ui = new firebaseui.auth.AuthUI(firebase.auth());
     ui.start("#firebaseui-auth-container", uiConfig);
+
+    firebase.auth().onAuthStateChanged(async (user) => {
+      this.$store.dispatch("user/login", user);
+    }); 
   }
 }
 </script>
