@@ -1,7 +1,7 @@
 <template>
   <div class="admin_header">
     <div class="title_area">
-      <h1>記事管理コンソール</h1>
+      <h1><nuxt-link to="/admin">コンテンツ管理パネル</nuxt-link></h1>
     </div>
     <div class="login_area">
       <div v-show="isLogin">

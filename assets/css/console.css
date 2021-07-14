@@ -3,10 +3,12 @@
   margin: 0 auto;
 }
 
+
+/* header */
 .admin_header{
   box-shadow: 0px 3px 16px -6px rgba(0,0,0,0.6);
   padding: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   display: flex;
   justify-content: space-between;
 }
@@ -51,12 +53,21 @@
   opacity: .8;
 }
 
-.admin_container main{
+/* login */
+.auth_login_container{
+  margin: 3em;
+}
+
+
+
+/* main */
+.admin_container main,
+.admin_container section{
   margin: 2em;
 }
 
 
-main .no_login{
+section .no_login{
   display: flex;
   margin: 3em;
   justify-content: center;
@@ -64,11 +75,318 @@ main .no_login{
   align-items: center;
 }
 
-main .no_login h2{
+section .no_login h2{
   font-size: 24px;
   font-weight: bold;
 }
-main .no_login img{
+section .no_login img{
   width: 150px;
   margin: 1em;
+}
+
+
+/*  console top */
+main.console_top{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+main.console_top h2{
+  font-size: 24px;
+  font-weight: bold;
+  margin: 1em;
+}
+main.console_top .menu_wrap{
+  min-width: 960px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin: 1em;
+}
+main.console_top .menu_wrap a{
+  width: 300px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0080ff;
+  color: white;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+main.console_top .menu_wrap a:hover{
+  opacity: .8;
+}
+
+main.console_top .alladmin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em;
+  line-height: 1.7;
+}
+main.console_top .alladmin h3{
+  font-size: 22px;
+  font-weight: bold;
+}
+main.console_top .alladmin a:first-of-type{
+  margin-top: 1em;
+}
+main.console_top .alladmin a{
+  color: #0080ff;
+}
+main.console_top .alladmin a:hover{
+  opacity: .8;
+  text-decoration: underline;
+}
+
+
+/* console list */
+main.console_list{
+  margin: 0;
+}
+main.console_list .list_header{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 2px solid #ccc;
+  padding: .5em 1em 1em;
+}
+main.console_list .list_header h3{
+  font-size: 18px;
+  font-weight: bold;
+  padding: .5em 0;
+  margin: 0 .5em;
+}
+main.console_list .list_header .wrap{
+  width: 45%;
+  display: flex;
+  justify-content: flex-start;
+}
+main.console_list .list_header .wrap:nth-child(2n){
+  justify-content: flex-end;
+}
+main.console_list .list_header .wrap a{
+  display: block;
+  padding: .5em 1em;
+  margin: 0 .5em;
+  background-color: #0080ff;
+  border-radius: 5px;
+  color: white;
+}
+main.console_list .list_header .wrap a:hover{
+  opacity: .8;
+}
+
+main.console_list .list_item{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1em;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+main.console_list .list_item:hover{
+  background-color: #fafafa;
+}
+main.console_list .list_item .id{
+  width: 5%;
+}
+main.console_list .list_item .title{
+  width: 65%;
+  height: 1.2em;
+  display: flex
+}
+
+main.console_list .list_item .title>span{
+  margin: 0 1em 0 0;
+  width: 50%;
+  height: 1.2em;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+main.console_list .list_item .title>span>span{
+  font-size: 80%;
+  border-radius: 2.5px;
+  border: 1px solid #666;
+  padding: .05em .25em;
+  margin: .5em;
+}
+main.console_list .list_item .date{
+  width: 7.5%;
+}
+main.console_list .list_item .link{
+  width: 5%;
+  text-align: center;
+}
+
+
+/* editor news */
+main.console_edit{
+  margin: 0;
+}
+main.console_edit .editor_header{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 2px solid #ccc;
+  padding: .5em 1em 1em;
+}
+main.console_edit .editor_header h3{
+  font-size: 18px;
+  font-weight: bold;
+  padding: .5em 0;
+  margin: 0 .5em;
+}
+main.console_edit .editor_header .wrap{
+  width: 45%;
+  display: flex;
+  justify-content: flex-start;
+}
+main.console_edit .editor_header .wrap:nth-child(2n){
+  justify-content: flex-end;
+}
+main.console_edit .editor_header .wrap button{
+  display: block;
+  padding: .5em 1em;
+  margin: 0 .5em;
+  background-color: #0080ff;
+  border-radius: 5px;
+  color: white;
+}
+main.console_edit .editor_header .wrap button:hover{
+  opacity: .8;
+}
+
+main.console_edit .editor_body{
+  display: flex;
+  justify-content: center;
+  margin: 1em 0;
+}
+main.console_edit .editor_body .input_area{
+  width: 47.5%;
+  border-right: 1px solid #ccc;
+  padding: 1em;
+}
+main.console_edit .editor_body .input_area .input_title,
+main.console_edit .editor_body .input_area .input_date{
+  margin: 0 1em 1em;
+  padding: .25em 1em;
+  display: flex;
+  align-items: center;
+}
+main.console_edit .editor_body .input_area .input_title label,
+main.console_edit .editor_body .input_area .input_date label
+{
+  width: 10%;
+}
+main.console_edit .editor_body .input_area .input_title input,
+main.console_edit .editor_body .input_area .input_date input{
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 0 1em;
+  padding: .5em 1em;
+  width: 90%;
+}
+main.console_edit .editor_body .input_area .input_text{
+  padding: .25em 1em;
+  display: flex;
+  align-items: center;
+}
+main.console_edit .editor_body .input_area .input_text textarea{
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace;
+  font-weight: lighter;
+
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 0 1em;
+  padding: .5em 1em;
+  width: 95%;
+  height: 100%;
+}
+
+main.console_edit .editor_body .view_area{
+  width: 47.5%;
+  padding: 1em;
+}
+main.console_edit .editor_body .view_area .news_contents{
+  margin: .25em 1em .25em 2em;
+}
+
+
+/* news container */
+.news_page .news_contents{
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.25);
+  padding: 2em;
+}
+
+.news_page .news_contents h2.title{
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 .5em;
+}
+.news_page .news_contents p.date{
+  color: #666;
+  font-size: 14px;
+  padding-bottom: .5em;
+  border-bottom: 1px solid #999;
+}
+
+.news_page .news_contents .news_content_area{
+  margin: 1.5em 0 0;
+  line-height: 1.7;
+}
+
+.news_content_area p{
+  font-size: 16px;
+  margin: .75em 0;
+}
+.news_content_area h3{
+  font-size: 18px;
+  background: linear-gradient(0deg, #bae4f8, #bae4f8 50%, transparent 50%, transparent 100%);
+  font-weight: bold;
+  margin: 1.25em 0 .5em;
+  padding: 0 .5em;
+  display: inline-block;
+}
+
+.news_content_area a{
+  color: #0080ff;
+  text-decoration: underline;
+}
+.news_content_area a:hover{
+  opacity: .8;
+  text-decoration: none;
+}
+
+.news_content_area ul{
+  padding-left: 1.5em;
+}
+.news_content_area li{
+  list-style: disc;
+  margin: .75em 0;
+}
+.news_content_area hr{
+  border: 0.25px solid #ddd;
+  margin: 1.5em 0;
+}
+.news_content_area img{
+  width: 100%;
+  height: auto;
+}
+
+.news_content_area #thumbnail{
+  width: 75%;
+  height: 75%;
+  border: 1px solid #ddd;
+  margin: 0 auto;
+}
+.news_content_area .thumbnail_hide{
+  display: none;
 }

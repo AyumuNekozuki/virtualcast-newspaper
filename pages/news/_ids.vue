@@ -72,6 +72,7 @@
 }
 .news_content_area li{
   list-style: disc;
+  margin: .75em 0;
 }
 .news_content_area hr{
   border: 0.25px solid #ddd;

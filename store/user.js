@@ -33,11 +33,13 @@ export const actions = ({
     
   },
   logout({commit}){
-    commit('setEmail', '');
-    commit('setDisplayName', '');
-    commit('setUid', '');
-    commit('setAdmin', '');
-    this.$router.push('/');
+    let logoutcheck = confirm('ログアウトします。よろしいですか？');
+    if(logoutcheck){
+      commit('setEmail', '');
+      commit('setDisplayName', '');
+      commit('setUid', '');
+      commit('setAdmin', '');
+    }
   }
 });
 
