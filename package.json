@@ -22,6 +22,7 @@
     "node-sass": "^6.0.1",
     "nuxt": "^2.15.3",
     "nuxt-fontawesome": "^0.4.0",
+    "nuxt-helmet": "^2.0.1",
     "sass-loader": "^12.1.0",
     "save": "^2.4.0",
     "v-viewer": "^1.6.3",

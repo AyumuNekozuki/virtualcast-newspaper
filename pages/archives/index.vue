@@ -3,9 +3,9 @@
     <h2 class="page_title">アーカイブ</h2>
 
     <div class="pagequery_wrap">
-      <a class="query_prev" :href="query_prev_href">Prev</a>
+      <a class="query_prev" :href="($route.query.pages) - 1">Prev</a>
       <p>{{ query }}ページ目を表示しています</p>
-      <a class="query_next" :href="query_next_href">Next</a>
+      <a class="query_next" :href="($route.query.pages) + 1">Next</a>
     </div>
 
     <div class="archive_wrap" id="archive_wrap">
@@ -204,11 +204,11 @@ div.pagequery_wrap a{
 div.pagequery_wrap a:hover{
   opacity: .8;
 }
-div.pagequery_wrap a.query_prev::before{
+div.pagequery_wrap .query_prev::before{
   content: "<";
   padding: 0 1em 0 0;
 }
-div.pagequery_wrap a.query_next::after{
+div.pagequery_wrap .query_next::after{
   content: ">";
   padding: 0 0 0 1em;
 }

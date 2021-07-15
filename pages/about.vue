@@ -18,13 +18,13 @@
           <div class="wrap_wrap">
             <div class="wrap">
               <p class="wrap_text">VRで読む</p>
+              <a href="https://seed.online/products/375e29f8544b8fd86bc40458f4f1cbbf93f4996296d6d370f378c2cf4c48ea1d"><img src="~assets/imgs/about/view_vci.png" alt=""></a>
             </div>
             <div class="wrap">
               <p class="wrap_text">Webで読む</p>
               <a href="/"><img src="~assets/imgs/about/view_web.png" alt=""></a>
             </div>
           </div>
-
         </div>
       </section>
       
@@ -61,7 +61,6 @@
           <li>アタック25の記事を書いていただける方</li>
           <li>占いコーナーを担当していただける方</li>
           <li>マンガ連載を担当していただける方</li>
-          <li>ルーム「Vキャス歴史館」の運営を手伝っていただける方</li>
         </ul>
         <p>
           <a
@@ -210,7 +209,7 @@ div.about_container .text_wrapper{
   min-height: 500px;
   justify-content: space-evenly;
 }
-div.about_container  .wrap_text{
+div.about_container .wrap_text{
   align-self: flex-end;
   background: #0080ff;
   padding: .5em 1em;
@@ -224,7 +223,7 @@ div.about_container  .wrap_text{
 div.about_container .wrap_text.logo{
   font-size: 32px;
   height: 2.5em;
-  width: 9em;
+  width: 9.5em;
   background-image: url('~/assets/logo.svg');
   background-size: contain;
   background-repeat: no-repeat;

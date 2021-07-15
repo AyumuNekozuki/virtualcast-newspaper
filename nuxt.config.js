@@ -20,7 +20,7 @@ export default {
       { name: 'twitter:site', content: '@nekozuki_dev' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/nuxt_favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.0/viewer.min.css' }
     ],
     script:[
@@ -50,6 +50,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     'nuxt-fontawesome',
+    'nuxt-helmet'
   ],
   fontawesome: {
     imports: [
@@ -62,6 +63,10 @@ export default {
         icons: ['fab']
       }
     ]
+  },
+  helmet: {
+    frameguard: false,
+    hidePoweredBy: true
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

@@ -192,11 +192,12 @@ main.console_list .list_item:hover{
 }
 main.console_list .list_item .id{
   width: 5%;
+  min-width: 100px;
 }
 main.console_list .list_item .title{
   width: 65%;
   height: 1.2em;
-  display: flex
+  display: flex;
 }
 
 main.console_list .list_item .title>span{
@@ -216,6 +217,7 @@ main.console_list .list_item .title>span>span{
 }
 main.console_list .list_item .date{
   width: 7.5%;
+  min-width: 100px;
 }
 main.console_list .list_item .link{
   width: 5%;
@@ -256,6 +258,11 @@ main.console_edit .editor_header .wrap button{
   border-radius: 5px;
   color: white;
 }
+main.console_edit .editor_header .wrap button.cansel{
+  background-color: #ddd;
+  border: 1px solid #ccc;
+  color: #666;
+}
 main.console_edit .editor_header .wrap button:hover{
   opacity: .8;
 }
@@ -271,25 +278,32 @@ main.console_edit .editor_body .input_area{
   padding: 1em;
 }
 main.console_edit .editor_body .input_area .input_title,
-main.console_edit .editor_body .input_area .input_date{
+main.console_edit .editor_body .input_area .input_date,
+main.console_edit .editor_body .input_area .input_text{
   margin: 0 1em 1em;
   padding: .25em 1em;
   display: flex;
   align-items: center;
 }
 main.console_edit .editor_body .input_area .input_title label,
-main.console_edit .editor_body .input_area .input_date label
-{
-  width: 10%;
+main.console_edit .editor_body .input_area .input_date label,
+main.console_edit .editor_body .input_area .input_text label{
+  width: 20%;
 }
 main.console_edit .editor_body .input_area .input_title input,
-main.console_edit .editor_body .input_area .input_date input{
+main.console_edit .editor_body .input_area .input_date input,
+main.console_edit .editor_body .input_area .input_text input{
   background: white;
   border: 1px solid #ddd;
   border-radius: 5px;
   margin: 0 1em;
   padding: .5em 1em;
-  width: 90%;
+  width: 80%;
+}
+main.console_edit .editor_body .input_area .input_title input:disabled,
+main.console_edit .editor_body .input_area .input_date input:disabled,
+main.console_edit .editor_body .input_area .input_text input:disabled{
+  background: #ddd;
 }
 main.console_edit .editor_body .input_area .input_text{
   padding: .25em 1em;
@@ -317,37 +331,47 @@ main.console_edit .editor_body .view_area .news_contents{
   margin: .25em 1em .25em 2em;
 }
 
+main.console_edit .editor_body hr{
+  border: 0.25px solid #ddd;
+  margin: 1.5em 0;
+}
+main.console_edit .editor_body details summary{
+  margin: 0 0 .75em;
+  padding: .25em .5em;
+  cursor: pointer;
+}
+
 
 /* news container */
-.news_page .news_contents{
+main.console_edit .news_page .news_contents{
   background: white;
   border-radius: 5px;
   box-shadow: 0 1px 3px rgba(0,0,0,.25);
   padding: 2em;
 }
 
-.news_page .news_contents h2.title{
+main.console_edit .news_page .news_contents h2.title{
   font-size: 24px;
   font-weight: bold;
   margin: 0 0 .5em;
 }
-.news_page .news_contents p.date{
+main.console_edit .news_page .news_contents p.date{
   color: #666;
   font-size: 14px;
   padding-bottom: .5em;
   border-bottom: 1px solid #999;
 }
 
-.news_page .news_contents .news_content_area{
+main.console_edit .news_page .news_contents .news_content_area{
   margin: 1.5em 0 0;
   line-height: 1.7;
 }
 
-.news_content_area p{
+main.console_edit .news_content_area p{
   font-size: 16px;
   margin: .75em 0;
 }
-.news_content_area h3{
+main.console_edit .news_content_area h3{
   font-size: 18px;
   background: linear-gradient(0deg, #bae4f8, #bae4f8 50%, transparent 50%, transparent 100%);
   font-weight: bold;
@@ -356,37 +380,68 @@ main.console_edit .editor_body .view_area .news_contents{
   display: inline-block;
 }
 
-.news_content_area a{
+main.console_edit .news_content_area a{
   color: #0080ff;
   text-decoration: underline;
 }
-.news_content_area a:hover{
+main.console_edit .news_content_area a:hover{
   opacity: .8;
   text-decoration: none;
 }
 
-.news_content_area ul{
+main.console_edit .news_content_area ul{
   padding-left: 1.5em;
 }
-.news_content_area li{
+main.console_edit .news_content_area li{
   list-style: disc;
   margin: .75em 0;
 }
-.news_content_area hr{
+main.console_edit .news_content_area hr{
   border: 0.25px solid #ddd;
   margin: 1.5em 0;
 }
-.news_content_area img{
+main.console_edit .news_content_area img{
   width: 100%;
   height: auto;
 }
 
-.news_content_area #thumbnail{
+main.console_edit .news_content_area #thumbnail{
   width: 75%;
   height: 75%;
   border: 1px solid #ddd;
   margin: 0 auto;
 }
-.news_content_area .thumbnail_hide{
+main.console_edit .news_content_area .thumbnail_hide{
   display: none;
+}
+
+/* content view */
+main.console_edit #WatchApp .page_title{
+  font-weight: bold;
+}
+main.console_edit #WatchApp section{
+  margin: .5em;
+}
+main.console_edit #WatchApp .tab_area .tab_wrap button{
+  padding: .5em 1em;
+  font-size: 14px;
+}
+main.console_edit #WatchApp .tab_area .section_wrap{
+  padding: .5em;
+}
+main.console_edit #WatchApp .section_wrap .tab_content h2{
+  font-size: 16px;
+}
+main.console_edit #WatchApp .section_wrap .tab_content .item_list p{
+  margin: 0;
+  font-size: 16px;
+}
+main.console_edit #WatchApp .section_wrap .tab_content .iframe_list a{
+  border: 1px solid #eee;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+#WatchApp .section_wrap .tab_content#nico_content .iframe_list{
+  justify-content: flex-start;
 }

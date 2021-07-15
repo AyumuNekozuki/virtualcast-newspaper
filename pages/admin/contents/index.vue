@@ -89,7 +89,7 @@ export default {
       datas = doc.data();
       datas.id = doc.id;
       datas.href = "/archives/" + doc.id;
-      datas.edit_href = "/admin/contents/editor?id=" + doc.id;
+      datas.edit_href = "/admin/contents/" + doc.id;
 
       var date = new Date(datas.date.seconds * 1000);
       datas.datetime = date.getFullYear() + "/" + (date.getMonth() + 1) + "/" + date.getDate();

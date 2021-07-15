@@ -1,6 +1,6 @@
 <template>
   <div class="index">
-    <div class="info">
+    <div class="info" v-if="!is_news_hidden">
       <font-awesome-icon :icon="['fas','bullhorn']" />
       <nuxt-link :to="news_data.href">{{ news_data.title }}</nuxt-link>
     </div>
@@ -74,7 +74,8 @@ export default {
     set_newest_date_href();
 
     function set_newest_date_href(){
-      var arr = (newest_data.id.substr(0, 4) + "/" + newest_data.id.substr(4, 2) + "/" + newest_data.id.substr(6, 2)).split("/");
+      var arr = newest_data.id + "";
+      arr = (arr.substr(0, 4) + "/" + arr.substr(4, 2) + "/" + arr.substr(6, 2)).split("/");
       var date = new Date(arr[0], arr[1] - 1, arr[2]);
       newest_data.date = date.getFullYear() + "年" + (date.getMonth() + 1) + "月" + date.getDate() + "日";
       newest_data.href = '/archives/' + newest_data.id;
@@ -96,6 +97,19 @@ export default {
       news_data.id = doc.id;
       news_data.href = '/news/' + doc.id;
     });
+
+    //日付計算
+    var today = new Date();
+    var timestamp = news_data.date.seconds;
+    var upload_day = new Date(timestamp * 1000);
+    var news_hidden = new Date();
+    news_hidden.setDate(upload_day.getDate() + 10);
+
+    if(news_hidden.getTime() < today.getTime()){
+      var is_news_hidden = true;
+    }else{
+      var is_news_hidden = false;
+    }
     
 
   /* 過去の記事 */
@@ -127,7 +141,8 @@ export default {
     return {
       newest_data,
       news_data,
-      oldcontents_data
+      oldcontents_data,
+      is_news_hidden
     };
   },
   mounted(){

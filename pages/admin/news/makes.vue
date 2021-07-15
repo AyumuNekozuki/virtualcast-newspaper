@@ -9,19 +9,20 @@
             <h3>お知らせ 新規作成</h3>
           </div>
           <div class="wrap">
-          <button @click="append_data">公開</button>
+            <button class="cansel" @click="cansel">キャンセル</button>
+            <button @click="append_data">公開</button>
           </div>
         </div>
         <div class="editor_body">
           <div class="input_area">
             <div class="input_title">
-              <label>ID</label><input type="text" id="input_id" name="namae" size="40" maxlength="75" placeholder="nwXXX の形式で入力してください">
+              <label>ID</label><input type="text" id="input_id" name="input_id" size="40" maxlength="75" placeholder="nwXXX の形式で入力してください">
             </div>
             <div class="input_title">
-              <label>タイトル</label><input type="text" id="input_title" name="namae" size="40" maxlength="75" placeholder="タイトルを入力してください">
+              <label>タイトル</label><input type="text" id="input_title" name="input_title" size="40" maxlength="75" placeholder="タイトルを入力してください">
             </div>
             <div class="input_date">
-              <label>公開日</label><input type="date" id="input_date" name="date" size="40" maxlength="75" placeholder="日付を入力してください">
+              <label>公開日</label><input type="date" id="input_date" name="input_date" size="40" maxlength="75" placeholder="日付を入力してください">
             </div>
             <div class="input_text">
               <textarea name="input_textarea" id="input_textarea" cols="30" rows="30" placeholder="本文を入力してください"></textarea>
@@ -119,6 +120,12 @@ export default {
           window.$nuxt.$router.push('/admin/news');
         }
         
+      }
+    },
+    cansel(){
+      var check = confirm('編集内容が破棄されます。よろしいですか？');
+      if(check){
+        window.$nuxt.$router.push('/admin/news');
       }
     }
   }
