@@ -161,7 +161,7 @@ export default {
     function get_newest_thumbnail(){ //新着記事サムネ取得
       var ids = $('section.newest_contents').attr('id');
       var old_ids = $('.article.card').eq(count).attr('id');
-      storageRef.child('archives/'+ ids +'/head.png').getDownloadURL().then(function(imgurl){
+      storageRef.child('archives/'+ ids +'/head_986x1138.jpeg').getDownloadURL().then(function(imgurl){
         if(!($('img[src="'+ imgurl +'"').length)){
           $('.headimg').append("<img id='newest_thumbnail' src='"+ imgurl + "' alt='"+ ids +"'>");
           $('#' + old_ids).prepend("<img id='old_thumbnail' src='"+ imgurl + "' alt='"+ ids +"'>");
@@ -175,7 +175,7 @@ export default {
     function get_old_thumbnail(){ //過去記事サムネ習得
       var old_ids = $('.article.card').eq(count).attr('id');
       var ids = old_ids.substr(4);
-      storageRef.child('archives/'+ ids +'/head.png').getDownloadURL().then(function(imgurl){
+      storageRef.child('archives/'+ ids +'/head_986x1138.jpeg').getDownloadURL().then(function(imgurl){
         if(!($('img[src="'+ imgurl +'"').length)){
           $('#' + old_ids).prepend("<img id='old_thumbnail' src='"+ imgurl + "' alt='"+ ids +"'>");
         }

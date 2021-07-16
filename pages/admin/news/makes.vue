@@ -24,6 +24,15 @@
             <div class="input_date">
               <label>公開日</label><input type="date" id="input_date" name="input_date" size="40" maxlength="75" placeholder="日付を入力してください">
             </div>
+            <div id="input_imgs_form">
+              <div id="input_imgs">
+                <div class='input_text'>
+                  <label>サムネイル</label><input type='file' accept='img/*' name='input_1' id='input_file_1' class="input_files" @change='changeImg'>
+                  <button class="file_input_delete"><font-awesome-icon :icon="['fas', 'trash-alt']"/></button>
+                </div>
+              </div>
+            </div>
+
             <div class="input_text">
               <textarea name="input_textarea" id="input_textarea" cols="30" rows="30" placeholder="本文を入力してください"></textarea>
             </div>
@@ -32,7 +41,10 @@
             <div class="news_contents">
               <h2 class="title" id="output_title"></h2>
               <p class="date" id="output_date"></p>
-              <div class="news_content_area" id="output_textarea"></div>
+              <div id="thumbnail"></div>
+              <div class="news_content_area" id="output_textarea">
+                
+              </div>
             </div>
           </div>
         </div>
@@ -48,6 +60,8 @@ import admin_header from "~/components/admin_header.vue";
 import admin_alart from "~/components/admin_alart.vue";
 const db = firebase.firestore();
 const news_db = db.collection("news");
+const storage = firebase.storage();
+const storageRef = storage.ref();
 
 export default {
   mixins: [Meta], 
@@ -98,6 +112,16 @@ export default {
     }
   },
   methods: {
+    changeImg(e){
+      this.thumbnail = e.target.files[0];
+      if (this.thumbnail) {
+        const reader = new FileReader();
+        reader.readAsDataURL(this.thumbnail);
+        reader.onload = () => {
+          $('#thumbnail').append("<img src='"+ reader.result +"'>");
+        }
+      }
+    },
     append_data(){
       let check = confirm('投稿します。よろしいですか？');
       if(check){
@@ -105,16 +129,31 @@ export default {
         var append_title = $('#input_title').val();
         var append_date = $('#output_date').text();
         var append_content = $('#input_textarea').val();
+        var is_check_imgs = $('#input_file_1').val();
+        if(is_check_imgs){
+          is_check_imgs = true;
+        }else{
+          is_check_imgs = false;
+        }
 
         var data = {
           title: append_title,
           date: new Date(append_date),
           content: append_content,
-          is_thumbnail: false
+          is_thumbnail: is_check_imgs
         }
 
-        var news_id = $('.editor.news_editor').attr('id');
-        const res = news_db.doc(append_id).set(data);
+        news_db.doc(append_id).set(data);
+        console.log("VCNP: データの登録が完了しました。")
+
+
+        if(is_check_imgs){
+          var path = storageRef.child('/news/'+ append_id + '/thumbnail.png');
+          var thumbnail = $('#input_file_1').prop('files')[0];
+          path.put(thumbnail)
+              .then(console.log("VCNP: サムネイル画像のアップロードが完了しました。"))
+              .catch(error => console.error(error))
+        }
 
         if(!alert("投稿が完了しました。")){
           window.$nuxt.$router.push('/admin/news');

@@ -369,7 +369,7 @@ export default {
       var viewerinit = "<script>var viewer = new Viewer(document.getElementById('"+ check_count_id +"'));<" + "/script>";
       setTimeout(function(){
         $('.tabitem').append(viewerinit);
-      },2250);
+      },(check_count * 750));
   
 
       $('.tabitem').on('click', function() {
@@ -379,7 +379,7 @@ export default {
     }
  
     function watch_get_img(){
-      storageRef.child('archives/'+ archives_id_img +'/' + (count + 1) +'.png').getDownloadURL().then(function(imgdata) {
+      storageRef.child('archives/'+ archives_id_img +'/' + (count + 1) +'_986x1138.jpeg').getDownloadURL().then(function(imgdata) {
         if(!($('img[src="'+ imgdata +'"').length)){
           $('.watch_area').append("<img class='watch_imgs' id='pages_"+ count +"' src='"+ imgdata + "'>");
         }
@@ -387,6 +387,7 @@ export default {
         console.error('storage :'+ error);
         $('.watch_area').append("<img src='~/assets/alicia_ng.png' alt='error!'>");
       });
+      
       count = count + 1;
     }
 

@@ -15,7 +15,7 @@ export default {
   data(){
     return {
       meta: {
-        title: "記事管理コンソール" ,
+        title: "コンテンツ管理パネル" ,
         description: "",
         type: 'page',
         url: 'https://vcnp.nekozuki.me/admin',

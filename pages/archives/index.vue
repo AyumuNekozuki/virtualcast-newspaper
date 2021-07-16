@@ -151,7 +151,8 @@ export default {
       if(ids == undefined){
         clearInterval(Interval);
       }else{
-        storageRef.child('archives/'+ ids +'/head.png').getDownloadURL().then(function(imgurl){
+
+        storageRef.child('archives/'+ ids +'/head_986x1138.jpeg').getDownloadURL().then(function(imgurl){
           if(!($('img[src="'+ imgurl +'"').length)){
             $('.archive_headimg').eq(count - 1).prepend("<img id='old_thumbnail' src='"+ imgurl + "' alt='"+ ids +"'>");
           }
@@ -159,6 +160,7 @@ export default {
           console.error('storage :'+ error);
           $('.archive_headimg').eq(count - 1).prepend("<img src='/_nuxt/assets/alicia_ng.png' alt='error!'>");
         });
+        
         count = count + 1;
       }
     };

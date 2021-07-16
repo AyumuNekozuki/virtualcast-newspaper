@@ -79,9 +79,17 @@ section .no_login h2{
   font-size: 24px;
   font-weight: bold;
 }
-section .no_login img{
+section .no_login img,
+.no_admin.no_login img{
   width: 150px;
   margin: 1em;
+}
+section .settingslink a{
+  color: #0080ff;
+  text-decoration: underline;
+}
+section .settingslink a:hover{
+  text-decoration: none;
 }
 
 
@@ -104,7 +112,8 @@ main.console_top .menu_wrap{
   flex-direction: row;
   margin: 1em;
 }
-main.console_top .menu_wrap a{
+main.console_top .menu_wrap a,
+.account_container .menu_wrap button{
   width: 300px;
   height: 100px;
   display: flex;
@@ -116,8 +125,18 @@ main.console_top .menu_wrap a{
   font-size: 20px;
   font-weight: bold;
 }
-main.console_top .menu_wrap a:hover{
+main.console_top .menu_wrap a:hover,
+.account_container .menu_wrap button:hover{
   opacity: .8;
+}
+.account_container .menu_wrap button{
+  margin-top: 1em;
+  width: auto;
+  height: auto;
+  padding: .75em 1em;
+  background-color: #dc3545;
+  font-size: 18px;
+  border-radius: 5px;
 }
 
 main.console_top .alladmin{
@@ -428,13 +447,19 @@ main.console_edit .news_content_area img{
   height: auto;
 }
 
-main.console_edit .news_content_area #thumbnail{
+main.console_edit #thumbnail{
   width: 75%;
   height: 75%;
   border: 1px solid #ddd;
-  margin: 0 auto;
+  margin: 1em auto;
 }
-main.console_edit .news_content_area .thumbnail_hide{
+main.console_edit #thumbnail:empty{
+  display: none;
+}
+main.console_edit #thumbnail img{
+  width: 100%;
+}
+main.console_edit .thumbnail_hide{
   display: none;
 }
 

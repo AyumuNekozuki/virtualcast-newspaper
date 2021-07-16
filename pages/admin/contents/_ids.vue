@@ -16,7 +16,7 @@
         <div class="editor_body">
           <div class="input_area">
             <div class="input_text">
-              <label>公開日</label><input required type="text" id="input_id" name="input_id" size="40" maxlength="75" placeholder="YYYYMMDD" v-model="archive_id">
+              <label>公開日</label><input disabled required type="text" id="input_id" name="input_id" size="40" maxlength="75" placeholder="YYYYMMDD" v-model="archive_id">
             </div>
             <div class="input_text">
               <label>ページ数</label><input required type="text" id="input_pages" name="input_date" size="40" maxlength="75" placeholder="半角数字で入力してください" v-model="archives_data.pages">

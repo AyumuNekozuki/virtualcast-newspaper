@@ -9,8 +9,14 @@
         <nuxt-link to="/admin/contents">記事管理</nuxt-link>
       </div>
       <div class="alladmin">
+        <h3>現状管理パネルからできないこと</h3>
+        <p>コンテンツの削除</p>
+        <p>コンテンツIDの変更</p>
+        <p>「特集」コンテンツにまつわるすべての操作</p>
+      </div>
+      <div class="alladmin">
         <h3>サーバー管理</h3>
-        <p>※特権管理者のみログインできます</p>
+        <p>特権管理者のみログインできます</p>
         <a target="_blank" href="https://console.firebase.google.com/project/virtualcast-newspaper/overview?hl=ja">Firebase Console</a>
         <a target="_blank" href="https://dashboard.heroku.com/apps/vcnp">Heroku Dashboard</a>
         <a target="_blank" href="https://manage.statuspage.io/">Statuspage.io</a>
