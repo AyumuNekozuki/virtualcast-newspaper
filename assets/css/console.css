@@ -300,6 +300,9 @@ main.console_edit .editor_body .input_area .input_text input{
   padding: .5em 1em;
   width: 80%;
 }
+main.console_edit .editor_body .input_area .input_text input[type="file"]{
+  cursor: pointer;
+}
 main.console_edit .editor_body .input_area .input_title input:disabled,
 main.console_edit .editor_body .input_area .input_date input:disabled,
 main.console_edit .editor_body .input_area .input_text input:disabled{
@@ -322,6 +325,26 @@ main.console_edit .editor_body .input_area .input_text textarea{
   width: 95%;
   height: 100%;
 }
+main.console_edit .editor_body .input_area #input_imgs{
+  display: flex;
+  flex-direction: column;
+}
+main.console_edit .editor_body .input_area #input_imgs_form .submit_button_wrapper{
+  display: flex;
+  justify-content: flex-end;
+  padding: .25em 1em;
+}
+main.console_edit .editor_body .input_area #input_imgs_form .submit_button_wrapper button{
+  padding: .5em 1em;
+  margin: 0 .5em;
+  background-color: #0080ff;
+  border-radius: 5px;
+  color: white;
+}
+main.console_edit .editor_body .input_area #input_imgs_form .submit_button_wrapper button:hover{
+  opacity: .8;
+}
+
 
 main.console_edit .editor_body .view_area{
   width: 47.5%;
@@ -418,6 +441,21 @@ main.console_edit .news_content_area .thumbnail_hide{
 /* content view */
 main.console_edit #WatchApp .page_title{
   font-weight: bold;
+}
+main.console_edit #WatchApp .watch_area{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 25vh;
+  height: auto;
+}
+main.console_edit #WatchApp .watch_area img{
+  width: 25%;
+  object-fit: contain;
+  border: none;
+}
+main.console_edit #WatchApp .watch_area img:not([src]){
+  display: none;
 }
 main.console_edit #WatchApp section{
   margin: .5em;

@@ -136,6 +136,194 @@ export default {
       }
     }
 
+
+    if(archive_doc_data.nico_01){
+      var contentid = archive_doc_data.nico_01;
+      var contenttype = contentid.slice(0,2);
+      var nicourl = "";
+
+      switch (contenttype) {
+        case ("sm" || "so"): //動画
+          nicourl = "https://ext.nicovideo.jp/thumb/" + contentid;
+          break;
+        case ("my"): //マイリスト
+          nicourl = "https://ext.nicovideo.jp/thumb_mylist/" + contentid.slice(7);
+          break;
+        case ("se"): //シリーズ
+          nicourl = "https://ext.nicovideo.jp/thumb_series/" + contentid.slice(7);
+          break;
+        case ("us"): //ユーザー
+          nicourl = "https://ext.nicovideo.jp/thumb_user/" + contentid.slice(5);
+          break;
+        case ("lv"): //生放送
+          nicourl = "https://live.nicovideo.jp/embed/" + contentid;
+          break;
+        case ("co"): //コミュ
+          nicourl = "https://com.nicovideo.jp/thumb_community/" + contentid;
+          break;
+        case ("ch"): //CH
+          nicourl = "https://ch.nicovideo.jp/" + contentid + "/thumb_channel";
+          break;
+        case ("td"): //立体
+          nicourl = "https://3d.nicovideo.jp/externals/widget?id=" + contentid;
+          break;
+        default:
+          nicourl = "";
+          break;
+      }
+
+      archive_doc_data.nico_01 = nicourl;
+    }
+    if(archive_doc_data.nico_02){
+      var contentid = archive_doc_data.nico_02;
+      var contenttype = contentid.slice(0,2);
+      var nicourl = "";
+
+      switch (contenttype) {
+        case ("sm" || "so"): //動画
+          nicourl = "https://ext.nicovideo.jp/thumb/" + contentid;
+          break;
+        case ("my"): //マイリスト
+          nicourl = "https://ext.nicovideo.jp/thumb_mylist/" + contentid.slice(7);
+          break;
+        case ("se"): //シリーズ
+          nicourl = "https://ext.nicovideo.jp/thumb_series/" + contentid.slice(7);
+          break;
+        case ("us"): //ユーザー
+          nicourl = "https://ext.nicovideo.jp/thumb_user/" + contentid.slice(5);
+          break;
+        case ("lv"): //生放送
+          nicourl = "https://live.nicovideo.jp/embed/" + contentid;
+          break;
+        case ("co"): //コミュ
+          nicourl = "https://com.nicovideo.jp/thumb_community/" + contentid;
+          break;
+        case ("ch"): //CH
+          nicourl = "https://ch.nicovideo.jp/" + contentid + "/thumb_channel";
+          break;
+        case ("td"): //立体
+          nicourl = "https://3d.nicovideo.jp/externals/widget?id=" + contentid;
+          break;
+        default:
+          nicourl = "";
+          break;
+      }
+
+      archive_doc_data.nico_02 = nicourl;
+    }
+    if(archive_doc_data.nico_03){
+      var contentid = archive_doc_data.nico_03;
+      var contenttype = contentid.slice(0,2);
+      var nicourl = "";
+
+      switch (contenttype) {
+        case ("sm" || "so"): //動画
+          nicourl = "https://ext.nicovideo.jp/thumb/" + contentid;
+          break;
+        case ("my"): //マイリスト
+          nicourl = "https://ext.nicovideo.jp/thumb_mylist/" + contentid.slice(7);
+          break;
+        case ("se"): //シリーズ
+          nicourl = "https://ext.nicovideo.jp/thumb_series/" + contentid.slice(7);
+          break;
+        case ("us"): //ユーザー
+          nicourl = "https://ext.nicovideo.jp/thumb_user/" + contentid.slice(5);
+          break;
+        case ("lv"): //生放送
+          nicourl = "https://live.nicovideo.jp/embed/" + contentid;
+          break;
+        case ("co"): //コミュ
+          nicourl = "https://com.nicovideo.jp/thumb_community/" + contentid;
+          break;
+        case ("ch"): //CH
+          nicourl = "https://ch.nicovideo.jp/" + contentid + "/thumb_channel";
+          break;
+        case ("td"): //立体
+          nicourl = "https://3d.nicovideo.jp/externals/widget?id=" + contentid;
+          break;
+        default:
+          nicourl = "";
+          break;
+      }
+
+      archive_doc_data.nico_03 = nicourl;
+    }
+    if(archive_doc_data.nico_04){
+      var contentid = archive_doc_data.nico_04;
+      var contenttype = contentid.slice(0,2);
+      var nicourl = "";
+
+      switch (contenttype) {
+        case ("sm" || "so"): //動画
+          nicourl = "https://ext.nicovideo.jp/thumb/" + contentid;
+          break;
+        case ("my"): //マイリスト
+          nicourl = "https://ext.nicovideo.jp/thumb_mylist/" + contentid.slice(7);
+          break;
+        case ("se"): //シリーズ
+          nicourl = "https://ext.nicovideo.jp/thumb_series/" + contentid.slice(7);
+          break;
+        case ("us"): //ユーザー
+          nicourl = "https://ext.nicovideo.jp/thumb_user/" + contentid.slice(5);
+          break;
+        case ("lv"): //生放送
+          nicourl = "https://live.nicovideo.jp/embed/" + contentid;
+          break;
+        case ("co"): //コミュ
+          nicourl = "https://com.nicovideo.jp/thumb_community/" + contentid;
+          break;
+        case ("ch"): //CH
+          nicourl = "https://ch.nicovideo.jp/" + contentid + "/thumb_channel";
+          break;
+        case ("td"): //立体
+          nicourl = "https://3d.nicovideo.jp/externals/widget?id=" + contentid;
+          break;
+        default:
+          nicourl = "";
+          break;
+      }
+
+      archive_doc_data.nico_04 = nicourl;
+    }
+    if(archive_doc_data.nico_05){
+      var contentid = archive_doc_data.nico_05;
+      var contenttype = contentid.slice(0,2);
+      var nicourl = "";
+
+      switch (contenttype) {
+        case ("sm" || "so"): //動画
+          nicourl = "https://ext.nicovideo.jp/thumb/" + contentid;
+          break;
+        case ("my"): //マイリスト
+          nicourl = "https://ext.nicovideo.jp/thumb_mylist/" + contentid.slice(7);
+          break;
+        case ("se"): //シリーズ
+          nicourl = "https://ext.nicovideo.jp/thumb_series/" + contentid.slice(7);
+          break;
+        case ("us"): //ユーザー
+          nicourl = "https://ext.nicovideo.jp/thumb_user/" + contentid.slice(5);
+          break;
+        case ("lv"): //生放送
+          nicourl = "https://live.nicovideo.jp/embed/" + contentid;
+          break;
+        case ("co"): //コミュ
+          nicourl = "https://com.nicovideo.jp/thumb_community/" + contentid;
+          break;
+        case ("ch"): //CH
+          nicourl = "https://ch.nicovideo.jp/" + contentid + "/thumb_channel";
+          break;
+        case ("td"): //立体
+          nicourl = "https://3d.nicovideo.jp/externals/widget?id=" + contentid;
+          break;
+        default:
+          nicourl = "";
+          break;
+      }
+
+      archive_doc_data.nico_05 = nicourl;
+    }
+
+
     archive_doc_data.pages = "pages_" + archive_doc_data.pages;
 
 
@@ -176,7 +364,7 @@ export default {
       $('#addtoany_init').append(addtoany_init);
 
       var embedjs_init = "<script async charset='utf-8' src='//cdn.iframe.ly/embed.js?api_key=2e3587807406fa2350bd4d'><" + "/script>";
-      $('.section_wrap').append(embedjs_init);
+      $('#vci_content .iframe_list').append(embedjs_init);
 
       var viewerinit = "<script>var viewer = new Viewer(document.getElementById('"+ check_count_id +"'));<" + "/script>";
       setTimeout(function(){
@@ -191,7 +379,6 @@ export default {
     }
  
     function watch_get_img(){
-
       storageRef.child('archives/'+ archives_id_img +'/' + (count + 1) +'.png').getDownloadURL().then(function(imgdata) {
         if(!($('img[src="'+ imgdata +'"').length)){
           $('.watch_area').append("<img class='watch_imgs' id='pages_"+ count +"' src='"+ imgdata + "'>");

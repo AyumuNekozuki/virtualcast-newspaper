@@ -6,7 +6,7 @@
       <div class="editor news_editor" :id="archive_id">
         <div class="editor_header">
           <div class="wrap">
-            <h3>記事管理 （ ID: {{ archive_id }} ） 情報編集</h3>
+            <h3>記事新規作成</h3>
           </div>
           <div class="wrap">
             <button type="submit" class="cansel" @click="cansel">キャンセル</button>
@@ -223,10 +223,9 @@ export default {
       return this.$store.getters["user/displayName"];
     }
   },
-  async asyncData({ params }) {
-    const archive_id = params.ids;
-    const document = await archives_db.doc(archive_id).get();
-    let archives_data = document.data();
+  async asyncData() {
+    let archive_id;
+    let archives_data = {}
 
     let is_data = {
       vci: true,
@@ -246,82 +245,6 @@ export default {
     });
 
     if(process.client){
-      //初期化
-      for(var i = 0; i < 4; i++){
-        if($('.input_nico').index(i)){
-          var eqs = $('.input_nico').index(i);
-          var contentid = ($('.input_nico').eq(eqs)).val() + "";
-          var contenttype = contentid.slice(0,2);
-          var nicourl;
-
-          switch (contenttype) {
-            case ("sm" || "so"): //動画
-              nicourl = "https://ext.nicovideo.jp/thumb/" + contentid;
-              break;
-            case ("my"): //マイリスト
-              nicourl = "https://ext.nicovideo.jp/thumb_mylist/" + contentid.slice(7);
-              break;
-            case ("se"): //シリーズ
-              nicourl = "https://ext.nicovideo.jp/thumb_series/" + contentid.slice(7);
-              break;
-            case ("us"): //ユーザー
-              nicourl = "https://ext.nicovideo.jp/thumb_user/" + contentid.slice(5);
-              break;
-            case ("lv"): //生放送
-              nicourl = "https://live.nicovideo.jp/embed/" + contentid;
-              break;
-            case ("co"): //コミュ
-              nicourl = "https://com.nicovideo.jp/thumb_community/" + contentid;
-              break;
-            case ("ch"): //CH
-              nicourl = "https://ch.nicovideo.jp/" + contentid + "/thumb_channel";
-              break;
-            case ("td"): //立体
-              nicourl = "https://3d.nicovideo.jp/externals/widget?id=" + contentid;
-              break;
-            default:
-              nicourl = "https://ext.nicovideo.jp/thumb/";
-              break;
-          }
-
-          ($('.output_nico').eq(eqs)).attr('src', nicourl);
-        }
-
-      }
-
-      var count = 0;
-
-      var archives_id_img = $('.wrapper').attr("id");
-      var check_count_id = $('#WatchApp .watch_area').attr("id");
-      var check_count = check_count_id + "";
-      check_count = Number(check_count);
-      var Interval = setInterval(function(){
-        watch_get_img();
-        if(count >= check_count){
-          clearInterval(Interval);
-        };
-      },750);
-      var viewerinit = "<script>var viewer = new Viewer(document.getElementById('"+ check_count_id +"'));<" + "/script>";
-      setTimeout(function(){
-        $('.tabitem').append(viewerinit);
-        clearInterval(Interval);
-      },2250);
-
-      function watch_get_img(){
-      storageRef.child('archives/'+ archives_id_img +'/' + (count + 1) +'.png').getDownloadURL().then(function(imgdata) {
-        if(!($('img[src="'+ imgdata +'"').length)){
-          $('.watch_area').append("<img src='"+ imgdata + "'>");
-        }
-      }).catch(function(error){
-        console.error('storage :'+ error);
-        $('.watch_area').append("<img src='~/assets/alicia_ng.png' alt='error!'>");
-      });
-      count = count + 1;
-      }
-      //
-
-      
-
       $(document).on('input', '.input_nico', function(e) {
         var eqs = $('.input_nico').index(this);
         var contentid = ($('.input_nico').eq(eqs)).val()

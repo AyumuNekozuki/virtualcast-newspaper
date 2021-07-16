@@ -3,9 +3,9 @@
     <h2 class="page_title">アーカイブ</h2>
 
     <div class="pagequery_wrap">
-      <a class="query_prev" :href="($route.query.pages) - 1">Prev</a>
+      <a class="query_prev" :href="query_prev_href">Prev</a>
       <p>{{ query }}ページ目を表示しています</p>
-      <a class="query_next" :href="($route.query.pages) + 1">Next</a>
+      <a class="query_next" :href="query_next_href">Next</a>
     </div>
 
     <div class="archive_wrap" id="archive_wrap">

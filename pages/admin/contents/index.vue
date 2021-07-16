@@ -8,7 +8,7 @@
           <h3>記事管理</h3>
         </div>
         <div class="wrap">
-          <nuxt-link to="">新規作成</nuxt-link>
+          <nuxt-link to="/admin/contents/makes">新規作成</nuxt-link>
         </div>
         
       </div>
